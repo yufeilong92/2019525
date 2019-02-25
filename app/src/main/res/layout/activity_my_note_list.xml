@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.bank.newbank.MyNoteListActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            android:id="@+id/iv_note_back"
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_note_cancle"
+            android:layout_width="@dimen/spance_50"
+            android:layout_height="@dimen/space_24"
+            android:layout_marginRight="@dimen/space_18"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/text_fu_color" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_note_make"
+            android:layout_width="@dimen/spance_50"
+            android:layout_height="@dimen/space_24"
+            android:layout_marginRight="@dimen/space_18"
+            android:background="@drawable/note_make_tv_bg"
+            android:gravity="center"
+            android:text="@string/edit"
+            android:textColor="@color/red_text" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <include layout="@layout/gm_refresh" />
+</LinearLayout>

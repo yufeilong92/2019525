@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:paddingTop="@dimen/space_4"
+        android:paddingBottom="@dimen/space_4"
+        android:orientation="vertical">
+        <!--android:background="@drawable/bg_select_answer_btn_ss"-->
+        <TextView
+            android:id="@+id/tv_pop_grdview_select"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_pop_gradview_evalues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_4"
+            android:paddingBottom="@dimen/space_4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_pop_grdview_number_index"
+                android:layout_width="@dimen/space_48"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="1"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/tv_pop_grdview_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:text="1分"
+                android:textColor="@color/red_text"
+                android:textSize="@dimen/text_size_11" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

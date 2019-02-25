@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_net_infom_root"
+    tools:context=".ui.net.HomeBookInfomActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_home_net_infom"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/space_48"
+        android:layout_height="match_parent" />
+    <include
+        layout="@layout/net_home_infom_layout"/>
+    <View
+        android:layout_marginBottom="@dimen/space_48"
+        android:layout_alignParentBottom="true"
+       style="@style/view_line1_gray_line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/text_size_16"
+            android:paddingRight="@dimen/text_size_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/spance_25"
+                android:gravity="center_vertical"
+                android:text="@string/y"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_net_infom_book_allprice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spance_25"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="2071"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_18" />
+
+            <TextView
+                android:id="@+id/tv_net_infom_contact_service"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/c_n_p_icon_service"
+                android:drawablePadding="@dimen/space_8"
+                android:gravity="center_vertical"
+                android:text="@string/custom_service"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/space_16"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_16"
+                android:background="@color/login_line_color" />
+
+            <Button
+                android:id="@+id/btn_net_infom_go_buy"
+                android:layout_width="110dp"
+                android:layout_height="32dp"
+                android:background="@drawable/btn_login_bg_normal"
+                android:paddingLeft="@dimen/space_8"
+                android:text="@string/do_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.bank.WebAnswerActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <ImageView style="@style/TitleBarAction" />
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取本地文件" />
+
+    <Button
+        android:id="@+id/btn_OutZip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解压本地文件" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_translation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="平移" />
+
+        <TextView
+            android:id="@+id/tv_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/center_bottom_sb_pg_color_blue_alpha"
+            android:gravity="center"
+            android:text="透明" />
+
+        <TextView
+            android:id="@+id/tv_scaley"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:text="缩放" />
+
+        <TextView
+            android:id="@+id/tv_rotation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/center_bottom_sb_pg_color_blue_alpha"
+            android:gravity="center"
+            android:text="旋转" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="@dimen/space_16"
+        android:text="222" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调起语音" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:gravity="center"
+        android:text="翻译结果" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:gravity="center" />
+
+</LinearLayout>

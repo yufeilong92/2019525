@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/space_16"
+    android:paddingBottom="@dimen/space_16"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_home_book"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_81"
+            android:layout_weight="1"
+            android:text="@string/home_teacherMateri"
+            android:drawablePadding="@dimen/space_8"
+            android:gravity="center_horizontal"
+            android:drawableTop="@mipmap/h_icon_jc" />
+
+        <Space style="@style/space_8_width" />
+
+        <TextView
+            android:id="@+id/tv_home_standard"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_81"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/h_icon_gf"
+           android:text="@string/home_specs"
+            android:drawablePadding="@dimen/space_8"
+            android:gravity="center_horizontal"
+            />
+        <Space style="@style/space_8_width" />
+        <TextView
+            android:id="@+id/tv_home_store"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_81"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/h_icon_shch"
+            android:text="@string/shaop"
+            android:drawablePadding="@dimen/space_8"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

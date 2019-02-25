@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.AgreementActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/TitleBarAction"
+            android:src="@mipmap/ic_back"
+            />
+        <!--tools:ignore="OnClick"-->
+            <!--android:onClick="onHomeClick"-->
+
+        <TextView
+            style="@style/TitleBarMarqueeText" />
+
+        <ImageView
+            android:id="@+id/iv_title_more"
+            android:src="@mipmap/nav_icon_share"
+            style="@style/TitleBarAction"
+            android:padding="14dp"
+         />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+<LinearLayout
+    android:id="@+id/ll_root_view"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <WebView
+        android:id="@+id/web_agreenement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/space_16"
+        android:scrollbarStyle="outsideInset"
+        android:paddingRight="@dimen/space_16"
+        android:visibility="gone">
+
+    </WebView>
+
+    <ImageView
+        android:id="@+id/iv_agreenment_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:visibility="gone" />
+</LinearLayout>
+</LinearLayout>

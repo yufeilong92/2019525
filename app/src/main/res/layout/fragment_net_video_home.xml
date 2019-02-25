@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_net_my_root"
+    android:orientation="vertical"
+    tools:context=".fragment.net.NetVideoHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_60"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:paddingTop="@dimen/space_30">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="我的网课"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_24"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/tv_year_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_22"
+            android:layout_gravity="bottom"
+            android:drawablePadding="@dimen/space_4"
+            android:layout_marginBottom="@dimen/space_4"
+            android:gravity="bottom"
+             />
+        <ImageView
+            android:layout_marginRight="7dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/c_icon_year"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/mgi_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48" />
+
+    <View style="@style/title_line_style" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

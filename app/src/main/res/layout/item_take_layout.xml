@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/space_10"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:background="@drawable/bg_order_infom_"
+            android:padding="1dp"
+            android:id="@+id/iv_take_book"
+            android:layout_width="@dimen/space_90"
+            android:layout_height="@dimen/space_90"
+            android:src="@mipmap/f_t" />
+            <!--android:scaleType="fitXY"-->
+
+        <ImageView
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:id="@+id/iv_take_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/giftimg" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_90"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_16">
+
+        <TextView
+            android:id="@+id/tv_take_title"
+            style="@style/text_title_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="2018" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_title_"
+                android:id="@+id/tv_Y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/y"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_take_value"
+                style="@style/text_title_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/x"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_11" />
+
+            <TextView
+                android:id="@+id/tv_take_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_11" />
+        </LinearLayout>
+        <ImageView
+            android:layout_marginTop="@dimen/space_8"
+            android:id="@+id/iv_good_status"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_18"
+            />
+    </LinearLayout>
+</LinearLayout>

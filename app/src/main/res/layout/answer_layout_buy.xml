@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/li_b_resolve_buy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/ic_b_analyze"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:padding="@dimen/space_16" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/space_20"
+            android:text="@string/pay_look_jiexi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14" />
+        <Button
+            android:id="@+id/btn_b_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space_20"
+            android:background="@drawable/btn_dialog_sure_bg"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:text="@string/go_do_pay"
+            android:textColor="@color/white" />
+</LinearLayout>

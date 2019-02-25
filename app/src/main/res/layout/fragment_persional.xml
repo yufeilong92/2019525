@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_root_user"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+    tools:context=".fragment.me.PersionalFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+
+        android:scrollbarThumbVertical="@android:color/transparent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_m_hear"
+                android:paddingTop="@dimen/space_24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/red_text"
+                android:orientation="vertical">
+
+                <Space style="@style/space_30_height" />
+
+                <ImageView
+                    android:id="@+id/iv_m_hear"
+                    android:layout_width="@dimen/space_60"
+                    android:layout_height="@dimen/space_60"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/common_icon_defaultpicture" />
+
+                <Space style="@style/space_16_height" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_m_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="用户名称"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold" />
+
+                    <Space style="@style/space_8_width" />
+
+                    <ImageView
+                        android:id="@+id/iv_m_edith"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_m_edit" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_m_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12" />
+
+                <Space style="@style/space_16_height" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/red_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_16"
+                    android:layout_marginRight="@dimen/space_16"
+                    android:background="@mipmap/ics_m_bg"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_m_my_msg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_persion_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_m_massage" />
+
+                        <Space style="@style/space_8_height" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mymsg"
+                            android:textSize="@dimen/text_size_12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_m_down"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_m_download" />
+
+                        <Space style="@style/space_8_height" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mydown"
+                            android:textSize="@dimen/text_size_12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_m_order"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_m_oder" />
+
+                        <Space style="@style/space_8_height" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/myorder"
+                            android:textSize="@dimen/text_size_12" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <Space style="@style/space_16_height" />
+            <LinearLayout
+                android:id="@+id/ll_m_tearcher"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/me_icon_ct" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_teacher"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tv_m_my_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/space_8"
+                    android:drawableRight="@mipmap/ic_more_go"
+                    android:gravity="center"
+                    android:textColor="@color/hint_text"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+            <LinearLayout
+                android:id="@+id/ll_m_addvaluer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/ic_m_added_value" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/addvuale"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/space_8"
+                    android:drawableRight="@mipmap/ic_more_go"
+                    android:gravity="center"
+                    android:text="@string/value_added_service"
+                    android:textColor="@color/hint_text"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_m_genuine"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/ic_m_confirm" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/authentic_verification"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/space_8"
+                    android:drawableRight="@mipmap/ic_more_go"
+                    android:gravity="center"
+                    android:text="@string/proving"
+                    android:textColor="@color/hint_text"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_m_erwerima"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/erweima" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="扫一扫"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="@dimen/space_8"
+                    android:drawableRight="@mipmap/ic_more_go"
+                    android:gravity="center"
+                    android:textColor="@color/hint_text"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_8"
+                android:background="@color/input_bg" />
+            <LinearLayout
+                android:id="@+id/ll_m_synchrodata"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/m_icon_tongbu" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/synchrodata"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_more_go" />
+
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+            <LinearLayout
+                android:id="@+id/ll_m_exam_log"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/m_icon_kaoshi" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/exam_log"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_more_go" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_8"
+                android:background="@color/input_bg" />
+            <LinearLayout
+                android:id="@+id/ll_m_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/ic_m_feedback" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/feedbBack"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_more_go" />
+
+            </LinearLayout>
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_m_notice"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:id="@+id/iv_m_p_system"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/ic_m_notice" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/notification"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:id="@+id/iv_m_p_ti_shi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/space_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_more_go" />
+
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_m_setting"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/space_16"
+                    android:layout_height="@dimen/space_16"
+                    android:src="@mipmap/ic_m_setting" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/setting"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_more_go" />
+            </LinearLayout>
+            <View
+                android:background="@color/input_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_48"/>
+            <View
+                android:background="@color/input_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.bank.BankBuyActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/surefrom" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_titel_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_b_bank_pay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_30"
+                android:text="@string/order_infom"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_18" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_20"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chb_b_pay_skill"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spance_50"
+                    android:layout_weight="1"
+                    android:button="@drawable/select_free_chb_bg"
+                    android:paddingLeft="@dimen/space_10"
+                    android:text="@string/shill_text"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y"
+                    />
+                <TextView
+                    android:id="@+id/tv_b_skill_pay_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chb_b_pay_collo"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spance_50"
+                    android:layout_weight="1"
+                    android:button="@drawable/select_free_chb_bg"
+                    android:paddingLeft="@dimen/space_10"
+                    android:text="@string/collortext"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y"
+                    />
+                <TextView
+                    android:id="@+id/tv_b_collo_pay_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chb_b_pay_case"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spance_50"
+                    android:layout_weight="1"
+                    android:button="@drawable/select_free_chb_bg"
+                    android:paddingLeft="@dimen/space_10"
+                    android:text="@string/casetext"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y"
+                    />
+                <TextView
+                    android:id="@+id/tv_b_case_pay_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <View style="@style/view_line_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spance_50"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/amount"
+                    android:textColor="@color/red_text"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y"
+                    android:textColor="@color/red_text"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_b_pay_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/red_text"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/view_line_10_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+            android:layout_marginTop="@dimen/space_20"
+            android:text="@string/playtype"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_18" />
+        <LinearLayout
+            android:layout_marginTop="@dimen/space_20"
+            android:id="@+id/ll_b_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/space_16">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spance_50"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/common_pay_wexin"
+                android:drawablePadding="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:text="@string/weixin"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_14" />
+
+            <CheckBox
+                android:id="@+id/chb_b_pay_weixin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/select_pay_rdb_bg" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_b_pay_zfb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/space_16">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spance_50"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/common_pay_zhifubao"
+                android:drawablePadding="@dimen/space_10"
+                android:gravity="center_vertical"
+                android:text="@string/zhifubao"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_14" />
+
+            <CheckBox
+                android:id="@+id/chb_b_pay_zfb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/select_pay_rdb_bg" />
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_marginTop="@dimen/space_16"
+            android:id="@+id/btn_b_submit_from"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:layout_marginLeft="@dimen/space_16"
+            android:layout_marginRight="@dimen/space_16"
+            android:background="@drawable/btn_login_bg_normal"
+            android:text="@string/submit_from"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/space_24">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:gravity="center_vertical"
+        android:text="@string/pay_type"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_14" />
+    <LinearLayout
+        android:id="@+id/ll_net_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/space_16">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spance_50"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/common_pay_wexin"
+            android:drawablePadding="@dimen/space_10"
+            android:gravity="center_vertical"
+            android:text="@string/weixin"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <CheckBox
+            android:id="@+id/chb_net_pay_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_pay_rdb_bg" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_net_pay_zfb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/space_16">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spance_50"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/common_pay_zhifubao"
+            android:drawablePadding="@dimen/space_10"
+            android:gravity="center_vertical"
+            android:text="@string/zhifubao"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <CheckBox
+            android:id="@+id/chb_net_pay_zfb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_pay_rdb_bg" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_dialog_sure_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:background="@drawable/btn_my_order_bg"
+        android:text="@string/sure_pay"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.net.NetBookDownActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/my_down" />
+
+        <TextView
+            android:id="@+id/tv_net_book_down_make"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="@dimen/space_8"
+            android:text="@string/edit"
+            android:textColor="@color/btn_bg_register"
+            android:textSize="@dimen/text_size_18" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <ScrollView
+        android:id="@+id/scroview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_16"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_net_loading_going"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_mydowning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingRight="@dimen/space_16"
+                    android:text="@string/downing"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_net_loading_going"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_16"
+                    android:paddingBottom="@dimen/space_16"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingRight="@dimen/space_16" />
+
+                <View style="@style/view_line_10_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_loading_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingRight="@dimen/space_16"
+                    android:text="@string/over_down"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_loading_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_16"
+                    android:paddingBottom="@dimen/space_16"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingRight="@dimen/space_16" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_net_book_down_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View style="@style/view_line_tab_line" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16">
+            <CheckBox
+                android:button="@drawable/select_free_chb_bg"
+                android:id="@+id/chb_net_book_down_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/all"
+                android:paddingLeft="@dimen/space_10"
+                android:textColor="@color/hint_text"
+                android:textSize="@dimen/text_size_14" />
+            <Button
+                android:id="@+id/btn_net_book_down_delect"
+                android:layout_width="@dimen/space_70"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_8"
+                android:background="@drawable/btn_login_bg_normal"
+                android:text="@string/delect"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_empty"
+        android:text="@string/Nobuffer"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

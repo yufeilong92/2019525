@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/gv_gm_mockexampop_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnWidth="48dp"
+        android:fastScrollEnabled="false"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="6"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:scrollbars="none"
+        android:verticalSpacing="4dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_gm_mockexam_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_title_color"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:id="@+id/tv_gm_mockexam_title" />
+
+        <GridView
+            android:id="@+id/gv_gm_text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="48dp"
+            android:fastScrollEnabled="false"
+            android:gravity="center"
+            android:horizontalSpacing="4dp"
+            android:numColumns="6"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:scrollbars="none"
+            android:verticalSpacing="4dp" />
+
+    </LinearLayout>
+</LinearLayout>

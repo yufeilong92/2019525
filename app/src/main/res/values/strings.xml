@@ -1,0 +1,729 @@
+<resources>
+    <string name="app_name">学川教育</string>
+
+    <!--//请求头-->
+    <string name="app_content_heat">https://app1.xuechuanedu.cn</string>
+    <!--<string name="app_content_heat">http://192.168.1.111:8080</string>-->
+    <!--<string name="app_content_heat">https://tapp1.xuechuanedu.cn</string>-->
+    <!--<string name="app_content_heat">http://192.168.1.110:8080</string>-->
+    <!--旧的保利设置-->
+    <string name="http_video_setting">/polyvideosettings/android.json</string>
+    <!--微信接口<*>-->
+    <!--<string name="http_url_weixin">/api/auth/login</string>-->
+    <string name="http_url_weixin">/api/authv2/login</string>
+    <string name="http_url_text">/api/test/post</string>
+    <!--token刷新-->
+    <string name="http_token">/api/Service/Refresh</string>
+    <!--验证码-->
+    <string name="http_code">/api/SecurityCode/Send</string>
+    <!--注册-->
+    <string name="http_register">/api/user/userpost</string>
+    <!--密码登录 <*>-->
+    <!--<string name="http_login">/api/user/login</string>-->
+    <string name="http_login">/api/userv2/login</string>
+    <!--热词-->
+    <string name="http_getHot">/api/search/gethot</string>
+    <!--关键字-->
+    <string name="http_getHotkey">/api/search/getsearchkey</string>
+    <!--资讯-->
+    <string name="http_infom">/api/advisory/get</string>
+    <!--推荐文章-->
+    <string name="http_WenZhan">/api/article/get</string>
+    <!--主界面-->
+    <string name="http_HomePage">/api/homepage/get</string>
+    <!--刷新token-->
+    <string name="http_refresh_token">/api/Service/Refresh</string>
+    <!--评价接口-->
+    <string name="http_comment">/api/comment/post</string>
+    <!--点赞接口-->
+    <string name="http_laud">/api/support/post</string>
+
+    <!--用户收藏接口-->
+    <string name="http_favpost">/api/question/favpost</string>
+    <!--根据文章tagid获取文章列表接口-->
+    <string name="http_getarticlelistbytag">/api/Article/getarticlelistbytag</string>
+    <!--获取文章tag-->
+    <string name="http_getarticletag">/api/Article/getarticletag</string>
+    <!--获取搜索内容-->
+    <string name="http_getresult">/api/search/getresult</string>
+    <!--提交做题记录-->
+    <string name="http_questionhispost">/api/question/questionhispost</string>
+    <!--规范章节列表-->
+    <string name="http_chapter">/api/standard/getchapter</string>
+    <!--规范文章列表-->
+    <string name="http_article">/api/standard/getarticle</string>
+    <!--获取教材科目列表-->
+    <string name="http_Course">/api/TextBook/GetCourse</string>
+    <!--.教材章节列表-->
+    <string name="http_jiaocaichapter">/api/textbook/getchapter</string>
+    <!--所有练习题题库-->
+    <string name="http_coursequestionids">/api/question/getcoursequestionids</string>
+    <!--题库首页获取错题和收藏数-->
+    <string name="http_errsetandfav">/api/question/geterrsetandfav</string>
+    <!--所有练习题题号(章节，历年真题，独家密卷)-->
+    <string name="http_chapterquestionids">/api/question/getchapterquestionids</string>
+    <!--科目题库获取题库标签-->
+    <string name="http_questiontags">/api/question/getquestiontags</string>
+    <!--用户错题/收藏题统计信息-->
+    <string name="http_questiontagscount">/api/question/getquestiontagscount</string>
+    <!--标签编号获取用户收藏错题或者错题题号-->
+    <string name="http_questiontagids">/api/question/getquestiontagids</string>
+    <!--获取文章评论-->
+    <string name="http_articlecomment">/api/article/getarticlecomment</string>
+    <!--获取评论的评论 -->
+    <string name="http_homecommentcomment">/api/article/getcommentcomment</string>
+    <!--题目详情-->
+    <string name="http_datail">/api/question/getdetail</string>
+    <!--题目评论-->
+    <string name="http_questioncmment">/api/question/getquestioncomment</string>
+    <!--根据文章编号获取文章详情-->
+    <string name="http_getdetail">/api/article/getdetail</string>
+
+    <!--获取题目评论二级评论-->
+    <string name="http_commentcomment">/api/question/getcommentcomment</string>
+    <!--是否购买此科目-->
+    <string name="http_isbought">/api/question/getisbought</string>
+    <!--获取下面所有题好号-->
+    <string name="http_questionidsbytagid">/api/question/getquestionidsbytagid</string>
+    <!--获取模拟考试试卷-->
+    <string name="http_examchapter">/api/question/getexamchapter </string>
+
+    <!--题库根据科目编号获取章节列表-->
+    <string name="http_getCnapter">/api/question/getchapter</string>
+    <!--错题移除-->
+    <string name="http_questionremoveerrsetpost">/api/question/questionremoveerrsetpost</string>
+    <!--获取网课产品列表-->
+    <string name="http_questionbankproduct">/api/question/getquestionbankproduct</string>
+    <!--//网课-->
+    <!--获取网课首页内容-->
+    <string name="http_getclassandproducts">/api/video/getclass</string>
+    <!--根据课程编号获取课程详情-->
+    <string name="http_getproductdetail">/api/video/getproductdetail</string>
+    <!--网课进度提交-->
+    <string name="http_playprogresspost">/api/video/playprogresspost</string>
+    <!--网课下载视频提交-->
+    <string name="http_videodownloadpost">/api/video/videodownloadpost</string>
+    <!--获取所有在售网课列表-->
+    <string name="http_getproduct">/api/video/getproduct</string>
+    <!--获取视频评价-->
+    <string name="http_getVideo_evalue">/api/video/getvideocomment</string>
+    <!--获取视频的评级评价-->
+    <string name="http_getvideocommentcomment">/api/video/getcommentcomment</string>
+
+    <!--个人中心-->
+    <!--兑换码兑换-->
+    <string name="http_exchangepost">/api/exchangecode/exchangepost</string>
+    <!--sn码正版授权验证-->
+    <string name="http_get_sncode">/api/sncode/get</string>
+    <!--用户建议提交接口-->
+    <string name="http_post_advice">/api/advice/post</string>
+    <!--获取订单信息-->
+    <string name="http_get_order">/api/order/get</string>
+    <!--获取用户信息-->
+    <string name="http_m_infom">/api/user/getmemberinfo</string>
+    <string name="http_m_infomone">/api/v2/user/getmemberinfo</string>
+    <!--头像修改-->
+    <string name="http_m_hear">/api/user/changeheadimg</string>
+    <!--信息修改-->
+    <string name="http_m_submitInfom">/api/user/changememberinfo</string>
+    <!--标记订单状态（取消订单，删除订单）-->
+    <string name="http_m_markorder">/api/order/markorder</string>
+    <!--获取我的通知-->
+    <string name="http_m_membernotification">/api/membernotification/get</string>
+    <!--获取我的消息-->
+    <string name="http_my_msg">/api/membernotification/get</string>
+    <!--个人中心绑定微信-->
+    <string name="http_bindwechat">/api/user/bindwechat</string>
+    <!--个人中心绑定微信-->
+    <string name="http_out_login">/api/user/logout</string>
+    <!--获取系统通知-->
+    <string name="http_system_msg">/api/systemnotification/get</string>
+    <!--删除我的消息-->
+    <string name="http_deletenotify">/api/membernotification/deletenotify</string>
+    <!--删除系统通知-->
+    <string name="http_delsystem">/api/systemnotification/deletenotify</string>
+    <!--用户修改密码-->
+    <string name="http_changerpwd">/api/user/userchangepwdpost</string>
+    <!--支付接口-->
+    <!--订单下单-->
+    <string name="http_makeorderpost">/api/order/makeorderpost</string>
+    <!--订单支付-->
+    <string name="http_pay">/api/pay/post</string>
+
+    <string name="http_upApp">/apks/appversion.json</string>
+
+    <!--有赞头-->
+    <string name="http_youzan_hear">https://trade.youzan.com/trade/order/result?</string>
+    <!--有赞店铺-->
+    <string name="http_youzan_tipu">kdt_id=948752</string>
+    <!--有赞的key-->
+    <string name="http_youzan_key">order_no</string>
+
+    <!--保利文件上传-->
+    <string name="http_boli_updata">/api/errlog/post</string>
+    <!--新的保利设置-->
+    <string name="http_setting">/configs/appsettings_android.json</string>
+
+    <!--============新增=================-->
+    <!--根据科目编号获取章节列表-->
+    <string name="http_getchapter">/api/questionv2/getchapter</string>
+    <!--根据科目获取题库标签-->
+    <string name="http_getquestiontags">/api/questionv2/getquestiontags</string>
+    <!--根据科目获取所有练习题题号-->
+    <string name="http_GetCourseQuestionIds">/api/questionv2/getcoursequestionids</string>
+    <!--获取用户错题/收藏题统计信息-->
+    <string name="http_GetQuestionTagsCount">/api/questionv2/getquestiontagscount</string>
+    <!--根据tagid获取用户收藏题或者错题练习题题号-->
+    <string name="http_GetQuestionTagIds">/api/questionv2/getquestiontagids</string>
+    <!--根据练习题题号获取详情-->
+    <string name="http_GetDetail">/api/questionv2/getdetail</string>
+    <!--做题记录提交，无需等待返回结果处理-->
+    <string name="http_questionshispost">/api/questionv2/questionhispost</string>
+    <!--扫码登录接口-->
+    <string name="http_loging_scan">/api/qr/scanpost</string>
+    <!--扫码确认接口-->
+    <string name="http_loging_scanconfirmpost">/api/qr/scanconfirmpost</string>
+    <!--获取评论升级V2【文章评论，题目评论，视频评论】-->
+    <string name="http_currency_comment">/api/comment/getcomment</string>
+    <!--获取评论的评论V2【文章评论的评论，题目评论的评论，视频评论的评论】-->
+    <string name="http_currency_comment_comment">/api/comment/getcommentcomment</string>
+    <!--获取网课首页我的网课课程V2-->
+    <string name="http_video2getclass">/api/videov2/getclass</string>
+    <!--获取用户地址列表-->
+    <string name="http_allAddress">/api/memberaddress/getaddress</string>
+    <!--创建修改用户地址-->
+    <string name="http_create_address">/api/memberaddress/createorupdatepost</string>
+    <!--设置默认地址-->
+    <string name="http_setdefaultaddresspost">/api/memberaddress/setdefaultaddresspost</string>
+    <!--删除地址-->
+    <string name="http_deleteaddresspost">/api/memberaddress/deleteaddresspost</string>
+    <!--根据兑换码获取兑换信息-->
+    <string name="http_changerifon">/api/exchangecode/getexchangeinfo</string>
+    <!--创建订单-->
+    <string name="http_makeVideoorderpost">/api/orderv2/makeorderpost </string>
+    <!--根据课程编号获取课程详情-->
+    <string name="http_getVideov3productdetail">/api/videov3/getproductdetail</string>
+    <!--获取会员默认地址-->
+    <string name="http_getdefaultaddress">/api/memberaddress/getdefaultaddress</string>
+    <!--根据订单编号获取订单详情-->
+    <string name="http_getOrderdetail">/api/orderv3/getorderdetail</string>
+    <!--订单地址确认-->
+    <string name="http_confirmaddress">/api/orderv3/confirmaddress</string>
+    <!--根据有赞订单号获取有赞订单物流信息-->
+    <string name="http_getYzOrdertrace">/api/logistics/getyzordertraces</string>
+    <!--获取会员订单列表 -->
+    <string name="http_get_v2order">/api/orderv3/get</string>
+    <!--根据快递单号获取物流信息 (非有赞订单)-->
+    <string name="http_getordertraces">/api/logistics/getordertraces </string>
+    <!--确认收货（内部订单）-->
+    <string name="http_confirmreceive">/api/orderv2/confirmreceive </string>
+    <!--根据退款Id获取退款状态-->
+    <string name="http_refund_get">/api/refund/get </string>
+    <!--标记订单状态（取消订单，删除订单）-->
+    <string name="http_m_v2markorder">/api/orderv2/markorder</string>
+
+    <!--标记订单状态（取消订单，删除订单）-->
+    <string name="http_oder_weixin_youzan">https://h5.youzan.com/v2/orders/all?kdt_id=948752</string>
+    <!--获取待地址确认赠品列表-->
+    <string name="httP_order_waitaddressorder">/api/orderv3/getwaitaddressorder </string>
+    <!--订单地址确认-->
+    <string name="http_order_wait_confirmaddress">/api/orderv2/confirmaddress</string>
+    <!--<string name="http_order_infom_youzan">https://h5.youzan.com/v2/trade/record/alllist?type=all</string>-->
+    <!--网课进度提交V2-->
+    <string name="http_playprogresspostv2">/api/videov2/playprogresspost</string>
+
+    <!--=-====================================第三次更改==================================================-->
+    <!--首页获取各个模块数据-->
+    <string name="http_app_home_get">/api/v2/homepage/get</string>
+    <!--获取搜索内容-->
+    <string name="http_app_home_getresult">/api/v2/search/getresult</string>
+    <!--获取所有在售网课列表-->
+    <string name="http_app_home_getproductlist">/api/v2/product/getproductlist</string>
+    <!--获取在售网课详细信息-->
+    <string name="http_app_home_getproductdetail">/api/v2/product/getproductdetail</string>
+    <!--产品评论-->
+    <string name="http_app_home_getproductdetailcomment">/api/v2/product/getproductcomment</string>
+    <!--获取【网课】模块用户开通的网课列表-->
+    <string name="http_app_net_myclass">/api/v2/user/getmyclass</string>
+    <!--题库版本升级-->
+    <string name="http_app_bank_getupgrade">/api/v2/question/getupgrade</string>
+
+    <string name="http_app_bank_file_down">/1.4.zip</string>
+
+
+    <!--每日一练-->
+    <string name="http_app_day_exercise">/api/v2/question/getdayexercise </string>
+    <!--每日一练详情-->
+    <string name="http_app_day_exercisedetail">/api/v2/question/getdayexercisedetail</string>
+    <!--获取历史每日一练-->
+    <string name="http_app_history_dayexercise">/api/v2/question/gethistorydayexercise</string>
+    <!--提交每日一练做题结果-->
+    <string name="http_app_submit_day_exrcise">/api/v2/question/DayExerciseResultPost</string>
+    <!--每日一练获取排名-->
+    <string name="http_app_day_paihang">/api/v2/question/getdayexerciseranking</string>
+    <!--题库笔记提交-->
+    <string name="http_app_questionnotpost">/api/v2/question/questionnotepost</string>
+    <!--获取我的笔记总数-->
+    <string name="http_app_question_notecount">/api/v2/question/getquestionnotecount</string>
+    <!--获取笔记列表-->
+    <string name="http_app_question_notelist">/api/v2/question/getquestionnote</string>
+    <!--删除笔记-->
+    <string name="http_app_quesiton_delete_note">/api/v2/question/deletequestionnotepost</string>
+    <!--提交错题-->
+    <string name="http_app_WrongQuestionPost">/api/v2/question/WrongQuestionPost</string>
+    <!--提交收藏-->
+    <string name="http_app_FavoritePost">/api/v2/question/FavoritePost</string>
+    <!--提交进度 -->
+    <string name="http_app_QuestionQueuePost">/api/v2/question/QuestionQueuePost</string>
+    <!--获取进度  -->
+    <string name="http_app_GetQuestionDoneQueue">/api/v2/question/GetQuestionDoneQueue</string>
+    <!--获取试卷做题记录列表   -->
+    <string name="http_app_GetExamHistory">/api/v2/question/GetExamHistory</string>
+    <!--获取试卷做题记录详情    -->
+    <string name="http_app_GetExamHistoryDetail">/api/v2/question/GetExamHistoryDetail</string>
+    <!--删除时间做题记录      -->
+    <string name="http_app_DeleteExamHistoryPost">/api/v2/question/DeleteExamHistoryPost</string>
+    <!--试卷提交       -->
+    <string name="http_app_exampost">/api/v2/question/exampost</string>
+    <!--获取单道题笔记-->
+    <string name="http_app_getnotebyquestion">/api/v2/question/GetNoteByQuestion</string>
+    <!--提交做题记录-->
+    <string name="http_app_questionpost">/api/v2/question/questionhispost</string>
+    <!--获取所有错题-->
+    <string name="http_app_geterrorsetquestion">/api/v2/question/GetErrorSetQuestion</string>
+    <!--/获取所有收藏集合-->
+    <string name="http_app_GetFavoriteQuestion">/api/v2/question/GetFavoriteQuestion</string>
+    <!--获取我的待解决问题列表-->
+    <string name="http_app_getWaitproblem">/api/v1/problem/getwaitproblem</string>
+    <!--问题提交/追问-->
+    <string name="http_app_submit_problem">/api/v1/problem/problempost</string>
+    <!--获取精选问题列表-->
+    <string name="http_app_gethankpickproblem">/api/v1/problem/getselectionproblem</string>
+    <!--获取我的问题列表-->
+    <string name="http_app_getmyproblem">/api/v1/problem/GetMyProblem</string>
+    <!--获取问题详情-->
+    <string name="http_app_problemdetail">/api/v1/problem/GetProblemDetail</string>
+    <!--问答评价-->
+    <string name="http_app_submit_probleevalues">/api/v1/problem/ProblemJudgePOST</string>
+    <!--提交问答标题tag-->
+    <string name="http_app_answer_tag">/configs/problemtags.json</string>
+    <!--教材-->
+    <string name="jiaocai">/apphtml/#/JiaocaiPage</string>
+    <!--规范-->
+    <string name="guifan">/apphtml/#/GuifanPage</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="tv_search_history">历史记录</string>
+    <string name="host_nominate">热门推荐</string>
+    <string name="login">登录</string>
+    <string name="login_title">登录学川</string>
+    <string name="regist_phone">手机注册</string>
+    <string name="regist">注册</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="forget_password1">忘记密码?</string>
+    <string name="please_paw">请输入密码</string>
+    <string name="please_new_paw">请输入新密码</string>
+    <string name="get_code">获取验证码中..</string>
+    <string name="please_input_phone">请输入手机号码</string>
+    <string name="please_input_code">请输入验证码</string>
+    <string name="please_input_pass">请输入用户密码</string>
+    <string name="login_loading">登录中...</string>
+    <string name="registerOK">注册成功</string>
+    <string name="phone1">请输入手机号码</string>
+    <string name="phone">手机号码</string>
+    <string name="phone2">联系电话</string>
+    <string name="phone_m">手机号</string>
+    <string name="user_password">账户密码</string>
+    <string name="user_password1">请输入密码</string>
+    <string name="or">或</string>
+    <string name="code">验证码</string>
+    <string name="sure_password">确认密码</string>
+    <string name="sure_new_password">确认新密码</string>
+    <string name="bingphone">绑定手机号</string>
+    <string name="reset_password">重置密码</string>
+    <string name="loading">加载中...</string>
+    <string name="passundersixt">密码不能低于6位</string>
+    <string name="please_login">用户登录过期，请登录</string>
+    <string name="please_register">用户还未注册,请注册</string>
+    <string name="sms_ok">验证码发送成功</string>
+    <string name="sms_ok_repeat">一分钟内同一个手机号不能重新发送</string>
+    <string name="sms_fail">短信发送失败</string>
+    <string name="phone_register">该手机号已注册</string>
+    <string name="location">定位</string>
+    <string name="home_teacherMateri">教材</string>
+    <string name="home_specs">规范</string>
+    <string name="home_infom">推荐资讯</string>
+    <string name="home_infom_all">推荐文章</string>
+    <string name="please_right_phone">请输入正确的手机号码</string>
+    <string name="home_select_content">搜索文章、题库</string>
+    <string name="more">更多</string>
+    <string name="submit_loading">提交中...</string>
+    <string name="submit">提交</string>
+    <string name="content_is_empty">内容不能为空</string>
+    <string name="mywrongquestion">我的错题</string>
+    <string name="bank_my_collect">我的收藏</string>
+    <string name="skill_free_composition">自由组卷</string>
+    <string name="special_practice">专项练习</string>
+    <string name="Chapter_practice">章节练习</string>
+    <string name="sequential_exercise">顺序练习</string>
+    <string name="_12">12</string>
+    <string name="right">正确</string>
+    <string name="myError">我的错题</string>
+    <string name="MyCollor">收藏题目</string>
+    <string name="evalue_empty">暂无评论内容</string>
+    <string name="number">数量</string>
+    <string name="twentyquestion">20道</string>
+    <string name="fiftyquestion">50道</string>
+    <string name="hundredquestion">100道</string>
+    <string name="difficulty">难度</string>
+    <string name="easy">容易</string>
+    <string name="medium">中等</string>
+    <string name="hard">困难</string>
+    <string name="again">从头开始</string>
+    <string name="pas_no_same">两次输入密码不一致</string>
+    <string name="score">分数</string>
+    <string name="answernubmer">答题数目</string>
+    <string name="delect_Success">删除成功</string>
+    <string name="net_error">网络异常,请稍后再试</string>
+    <string name="suggest_net">推荐网课</string>
+    <string name="my_net">我的网课</string>
+    <string name="go_look">去看看</string>
+    <string name="user_no_buy">您还未购买课目</string>
+    <string name="delect">删除</string>
+    <string name="allow">允许</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_sucess">取消成功</string>
+    <string name="complete">完成</string>
+    <string name="edit">编辑</string>
+    <string name="start_down">开始下载</string>
+    <string name="stopdown">暂停下载</string>
+    <string name="company_about">河南学川教育咨询有限公司&#160;&#160;&#160;&#160;版权所有</string>
+    <string name="service_agreement">《用户服务协议》</string>
+    <string name="about">关于</string>
+    <string name="modify_password">修改密码</string>
+    <string name="version_update">版本更新</string>
+    <string name="bindweixin">绑定微信</string>
+    <string name="nickname">昵称</string>
+    <string name="sex">性别</string>
+    <string name="birthday">生日</string>
+    <string name="city">城市</string>
+    <string name="your_opinion">您的意见</string>
+    <string name="practice_mode">联系方式</string>
+    <string name="phoneorweixin">手机/微信</string>
+    <string name="submit_feedback">提交反馈</string>
+    <string name="submit_success">提交成功</string>
+    <string name="feedback_success">提交成功，我们将收到您的反馈</string>
+    <string name="submit_error">提交失败</string>
+    <string name="setting">设置</string>
+    <string name="notification">系统通知</string>
+    <string name="feedbBack">用户反馈</string>
+    <string name="proving">辅导书正版验证</string>
+    <string name="authentic_verification">正版验证</string>
+    <string name="value_added_service">兑换增值服务</string>
+    <string name="addvuale">增值服务</string>
+    <string name="myorder">我的订单</string>
+    <string name="mydown">我的缓存</string>
+    <string name="mymsg">我的消息</string>
+    <string name="code_empty">兑换码不能为空</string>
+    <string name="code_error">兑换失败</string>
+    <string name="code_suceess">兑换成功</string>
+    <string name="code_empty1">请输入验证码</string>
+    <string name="persion">个人资料</string>
+    <string name="shill_text">技术实务题库</string>
+    <string name="collortext">综合能力题库</string>
+    <string name="casetext">案例分析题库</string>
+    <string name="thiry">￥30</string>
+    <string name="y">￥</string>
+    <string name="y1">-￥</string>
+    <string name="playtype">支付方式</string>
+    <string name="weixin">微信</string>
+    <string name="zhifubao">支付宝</string>
+    <string name="submit_from">提交订单</string>
+    <string name="pay_type">请选择支付方式</string>
+    <string name="no_down_video">没有任务要下载</string>
+    <string name="paysuccess">支付成功</string>
+    <string name="pay_error">支付失败</string>
+    <string name="surefrom">确认订单</string>
+    <string name="sure">确定</string>
+    <string name="save">保存</string>
+    <string name="buySuccess">购买成功</string>
+    <string name="buyError">购买失败</string>
+    <string name="buyStauts">购买结果</string>
+    <string name="name_empty">名字不能为空</string>
+    <string name="sava_success">保存成功</string>
+    <string name="save_errror">保存失败</string>
+    <string name="order_code">订单编号:</string>
+    <string name="order_code1">订单编号</string>
+    <string name="total">总计</string>
+    <string name="pay_money">付款</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="preferential">优惠</string>
+    <string name="delect_order">删除订单</string>
+    <string name="weixin_installed">请先安装微信客户端</string>
+    <string name="title_activity_my_order_infom">MyOrderInfomActivity</string>
+    <string name="order_detail">订单详情</string>
+    <string name="ware_name">商品名称</string>
+    <string name="order_time">下单时间</string>
+    <string name="order_price">订单金额</string>
+    <string name="paytype">支付方式</string>
+    <string name="changerrpaw">修改密码</string>
+    <string name="rawpaw">原密码</string>
+    <string name="newpaw">新密码</string>
+    <string name="old_paw_empty">旧密码不能为空</string>
+    <string name="new_paw_empty">新密码不能为空</string>
+    <string name="sure_paw_sure">确认新密码不能为空</string>
+    <string name="paw_no_same">新密码输入不相同</string>
+    <string name="old_paw">请输入旧密码</string>
+    <string name="latest_version">已经是最新版本</string>
+    <string name="camera">拍照</string>
+    <string name="phoneal">相册</string>
+    <string name="system_notice">系统通告</string>
+    <string name="mymsg_notice">我的消息</string>
+    <string name="is_del">是否删除</string>
+    <string name="delect_error">删除失败</string>
+    <string name="delect_order1">是否删除订单</string>
+    <string name="bindSuccess">绑定成功</string>
+    <string name="binderror">绑定失败</string>
+    <string name="pas_changer_error">密码修改失败</string>
+    <string name="no_try_see">本课目没有提供试看视频</string>
+    <!--<string name="evelua_sucee">提交成功，等待审核</string>-->
+    <string name="evelua_sucee">评论已提交，审核后可见</string>
+    <string name="changesuccess">修改成功</string>
+    <string name="sure_out">确定退出</string>
+    <string name="look">查看</string>
+    <string name="iscancelorder">是否取消订单</string>
+    <string name="weixinlogin">微信登录</string>
+    <string name="resetpaw">重置密码成功</string>
+    <string name="Nobuffer">暂无缓存</string>
+    <string name="Allarticle">全部文章</string>
+    <string name="please_del_video">请选择要删除的视频</string>
+    <string name="suppr_suc">点赞成功</string>
+    <string name="net_look">正在使用非WIFI网络，播放将产生流量费用</string>
+    <string name="net_down">正在使用非WIFI网络，下载将产生流量费用</string>
+    <string name="net_error_down">当前网络异常,无法下载</string>
+    <string name="net_error_play">网络异常,无法播放</string>
+    <string name="service_xieyi">服务协议</string>
+    <string name="no_net">当前网络异常,请检查网络</string>
+    <string name="et_hint">我来说两句...</string>
+    <string name="p_is_empty">该篇没有练习， 请重新选择</string>
+    <string name="q_type">选题类型</string>
+    <string name="look_analyze">查看解析</string>
+    <string name="answer">参考答案</string>
+    <string name="loading_more">加载更多</string>
+    <string name="Last_q">上一题</string>
+    <string name="next_q">下一题</string>
+    <string name="sprit">/</string>
+    <string name="net_book">网课</string>
+    <string name="last_next">上次答到第</string>
+    <string name="next_last">题，是否继续</string>
+    <string name="next_prgress">继续将转到上次进度</string>
+    <string name="next">继续</string>
+    <string name="loaction">定位</string>
+    <string name="again_do">重新做题</string>
+    <string name="start_using">立即使用</string>
+    <string name="sure_pay">确认支付</string>
+    <string name="my_down">我的缓存</string>
+    <string name="downing">正在缓存</string>
+    <string name="over_down">已缓存</string>
+    <string name="all">全选</string>
+    <string name="no_content">暂无内容</string>
+    <string name="order_infom">订单信息</string>
+    <string name="amount">总计</string>
+    <string name="pay_success">购买成功</string>
+    <string name="sure_submit_text">还有题目没有做，确认交卷</string>
+    <string name="submit_text">交卷</string>
+    <string name="share">分享</string>
+    <string name="order_result">订单结果</string>
+    <string name="Super_clear">超清</string>
+    <string name="high_definition">高清</string>
+    <string name="easy_chang">流畅</string>
+    <string name="no_book">暂无课程</string>
+    <string name="look_my_down">查看缓存</string>
+    <string name="all_down">全部缓存</string>
+    <string name="calendar_year_title">历年真题</string>
+    <string name="exclusive_secret_roll">独家密卷</string>
+    <string name="no_book_order">暂无课程表</string>
+    <string name="nationwide">全国</string>
+    <string name="go_do_text">去做题</string>
+    <!--<string name="weixin">微信</string>-->
+    <string name="friendsCircle">朋友圈</string>
+    <string name="weibo">微博</string>
+    <string name="qq">QQ</string>
+    <string name="qq_cirlce">QQ空间</string>
+    <string name="pay_look_jiexi">购买题库可以查看解析哦</string>
+    <string name="go_do_pay">去购买</string>
+    <string name="number_video">个视频</string>
+    <string name="back">退出</string>
+    <string name="custom_service">联系客服</string>
+    <string name="do_pay">立即购买</string>
+    <string name="no_xg_data">暂无相关内容</string>
+    <string name="search_empty">搜索内容为空</string>
+    <string name="no_evalue">暂无评价内容</string>
+    <string name="scope">范围</string>
+    <string name="create_volume">生成试卷</string>
+    <string name="stop_time">已暂停计时</string>
+    <string name="next_do_text">继续答题</string>
+    <string name="error">错误</string>
+    <string name="missing">漏选</string>
+    <string name="no_down_data">暂无下载内容</string>
+    <string name="please_updata_type">请选择图片上传方式</string>
+    <string name="do_test">点击验证</string>
+    <string name="exchange_code">兑换码</string>
+    <string name="sure_exchange">确认兑换</string>
+    <string name="phone_text">手机号验证</string>
+    <string name="send_code">发送验证码</string>
+    <string name="paw_setting">密码设置</string>
+    <string name="reading_consent">我已阅读并同意</string>
+    <string name="protocol">《用户注册协议》</string>
+    <string name="down_book_video">已下载课程</string>
+    <string name="available_space">，可用空间</string>
+    <string name="night_type">夜间模式</string>
+    <string name="day_type">日常模式</string>
+    <string name="eye_type">护眼模式</string>
+    <string name="right_go_next">答对自动跳转下一题</string>
+    <string name="delect_right_number">错题移除正确次数</string>
+    <string name="add_fack">描述您在APP使用中遇到的问题或建议</string>
+    <string name="sure_answer">确认答案</string>
+    <string name="answer_1">答案:</string>
+    <string name="answer_2">答案</string>
+    <string name="analyze">解析</string>
+    <!--<string name="difficulty">难度</string>-->
+    <string name="add_evalue">添加评论</string>
+    <string name="del_text">该练习题已经删除</string>
+    <string name="system_msg">暂无系统通知列表数据</string>
+    <string name="my_msg">暂无消息列表数据</string>
+    <string name="shaop">商城</string>
+    <string name="loading_wait">正在加载数据，请等待</string>
+    <string name="lastVideo">已经最后一个视频</string>
+    <string name="code_result">验证结果</string>
+    <string name="add_value_servie">包含以下增值服务</string>
+    <string name="genuine">恭喜,您的书是正版</string>
+    <string name="piracy">您的书是盗版</string>
+    <string name="com_login_">学川教育网页版登陆确认</string>
+    <string name="sure_login">确认登录</string>
+    <string name="cancle_login">取消登录</string>
+    <string name="address_manage">地址管理</string>
+    <string name="edit_address">编辑收货地址</string>
+    <string name="edit_detail_address">请输入详细地址</string>
+    <string name="street_address">街道地址</string>
+    <string name="please_province">请选择省市区</string>
+    <string name="province">省市区</string>
+    <string name="addres_name">收件人姓名</string>
+    <string name="addressee">收件人</string>
+    <string name="delete_address">删除地址</string>
+    <string name="please_input_name">请输入收件人姓名</string>
+    <string name="please_select_p_c_a">请选择省市区</string>
+    <string name="default_address">设置默认</string>
+    <string name="take_delivery">确认收货地址</string>
+    <string name="sure_infom">你的商品即将发货,请确认相关信息</string>
+    <string name="delivery_default">收货地址</string>
+    <string name="Delivery_Goods">发货商品</string>
+    <string name="x">x</string>
+    <string name="postalcode">邮政编码</string>
+    <string name="refund">申请退款</string>
+    <string name="refund_progres">退款进度</string>
+    <string name="refund_goods">退款商品</string>
+    <string name="number_of_refunds">退款数量</string>
+    <string name="refund_cause">退款原因</string>
+    <string name="refund_reason">请选择退款原因</string>
+    <string name="refund_value">退款金额</string>
+    <string name="submit_post">提交申请</string>
+    <string name="express_message">快递信息/备注</string>
+    <string name="please_select_refund">请选择退款原因</string>
+    <string name="logistics">查看物流</string>
+    <string name="refund_identifier">退款编号</string>
+    <string name="refund_time">申请时间</string>
+    <string name="refund_cancel">撤销退款申请</string>
+    <string name="cancel_apply">撤销申请</string>
+    <string name="cancel_close">确定撤销本次退款申请将关闭</string>
+    <string name="order_commodity">订单商品</string>
+    <string name="seller_msg">卖家留言</string>
+    <string name="book_serial_numbe">本书序列号</string>
+    <string name="value_added">兑换增值服务</string>
+    <string name="pay">支付</string>
+    <string name="buyer_message">买家留言</string>
+    <string name="special_demand">如有特殊需求请备注</string>
+    <string name="confirm_receipt">确认收货</string>
+    <string name="customer_service">正在出库，如果修改地址请联系客服</string>
+    <string name="order_infom_1">您有订单即将发货，请确认地址</string>
+    <string name="add_sure_address">请添加收货地址</string>
+    <string name="login_see">请重新登陆,再点击查看</string>
+    <string name="allow_down_video">允许2G/3G/4G网络下载视频</string>
+    <string name="allow_play_video">允许2G/3G/4G网络播放视频</string>
+    <string name="clear_canler">清理缓存</string>
+    <string name="no_video">(不包括缓存视频)</string>
+    <!--<string name="no_down_data">暂无下载内容</string>-->
+    <!--<string name="phone">手机号码</string>-->
+    <string name="unknow">未知</string>
+    <string name="live_bitrate_changetitle">- 选择当前清晰度 -</string>
+    <string name="live_bitrate_float_tip">您当前网络状态不稳定，建议您切换至</string>
+    <string name="home_net">精品网课</string>
+    <string name="my_teacher">我的班主任</string>
+    <string name="down_error">下载失败,请重新下载</string>
+    <string name="save_success">保存成功</string>
+    <string name="teacher_shou">授课教师</string>
+    <string name="book_infom">课程详情</string>
+    <string name="home_tacher_book">精品教辅</string>
+    <string name="net_switch">切换</string>
+    <string name="other_catalogue">暂无其它目录</string>
+    <string name="select_net">选择课程</string>
+    <string name="premium">赠品</string>
+    <string name="infom">详情</string>
+    <string name="catalogue">目录</string>
+    <string name="evaluate">评论</string>
+    <string name="do_number">已做题数</string>
+    <string name="all_number">总题数</string>
+    <string name="right_number">正确率</string>
+    <string name="error_list">错题集</string>
+    <string name="favorite_list">收藏夹</string>
+    <string name="note_list">笔记</string>
+    <string name="dao">道</string>
+    <string name="centre">考点</string>
+    <string name="et_input_answer">请输入答案</string>
+    <string name="collect">收藏</string>
+    <string name="a">A</string>
+    <string name="mokeexam">模拟考试</string>
+    <string name="special">专项练习</string>
+    <string name="start_text">开始答题</string>
+    <string name="input_content">请输入内容</string>
+    <string name="suredelete">确认删除</string>
+    <string name="answe_one">答题</string>
+    <string name="self_evaluation">自评</string>
+    <!--network state-->
+    <string name="network_not_info">当前没有可用网络,请检查设置!</string>
+    <!--iat string-->
+    <string name="pref_key_iat_show">iat_show</string>
+    <string name="text_begin">请开始说话…</string>
+    <string name="synchrodata">同步数据</string>
+    <string name="exam_log">考试记录</string>
+    <string name="syn">最近同步</string>
+    <string name="case_anslysis">案例分析</string>
+    <string name="sysable">综合能力</string>
+    <string name="skill">技术实务</string>
+    <string name="error_question">错题</string>
+    <string name="book">科目</string>
+    <string name="now_sys">立即同步</string>
+    <string name="again_exam">重做</string>
+    <string name="daiJiejue">待解决</string>
+    <string name="choice">精选</string>
+    <string name="my">我的</string>
+    <string name="submit_question">提问</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="my_error">我的错题</string>
+    <string name="empty_fu">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</string>
+    <string name="live_count">直播倒计时</string>
+    <string name="living_count">正在直播</string>
+    <string name="last_question">"已经是最后一道题,请交卷"</string>
+    <string name="last_questionOne">"已经是最后一道题"</string>
+    <string name="out">"再按一次退出"</string>
+    <string name="self_evaluation_One">自我评价</string>
+    <string name="self_evaluation_One_contetn">主管题目评分后计入总分</string>
+    <string name="skip">跳过</string>
+    <string name="grade">评价</string>
+    <string name="go_grade">继续评价</string>
+    <string name="has_submit_exam">是否确认交卷</string>
+
+
+</resources>

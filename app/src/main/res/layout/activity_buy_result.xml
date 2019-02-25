@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.BuyResultActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/surefrom" />
+
+        <ImageView style="@style/TitleBarAction" />
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_30" />
+
+    <ImageView
+        android:id="@+id/iv_buy_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/common_feedback_suc" />
+
+    <TextView
+        android:id="@+id/tv_buy_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:gravity="center"
+        android:src="@mipmap/common_feedback_suc"
+        android:text="@string/buySuccess"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_18" />
+    <TextView
+        android:id="@+id/tv_buy_time"
+        android:textColor="@color/text_fu_color"
+        android:textSize="@dimen/text_size_14"
+        android:layout_marginTop="@dimen/space_8"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

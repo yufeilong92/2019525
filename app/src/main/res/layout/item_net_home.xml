@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/space_16">
+
+    <ImageView
+        android:id="@+id/iv_net_all_title_img"
+        android:layout_width="@dimen/spance_120"
+        android:layout_height="@dimen/space_70"
+        android:scaleType="fitXY"
+        android:src="@mipmap/banner" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_70"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_8">
+
+        <TextView
+            android:id="@+id/tv_net_all_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="标题"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_net_all_pricle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:text="2000"
+            android:textColor="@color/red_text"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+</LinearLayout>

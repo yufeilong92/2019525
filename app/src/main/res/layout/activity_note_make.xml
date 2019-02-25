@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.bank.newbank.NoteMakeActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_note_save"
+            android:layout_width="@dimen/spance_50"
+            android:layout_height="@dimen/space_24"
+            android:layout_marginRight="@dimen/space_18"
+            android:background="@drawable/note_make_tv_bg"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/red_text" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_note_make_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="来源题目"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_make_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="题目"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_note_testing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="考点"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_more_go" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line_1_gray"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+         />
+
+    <com.xuechuan.xcedu.weight.ContentEditText
+        android:id="@+id/cet_note_make_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/space_8"
+        android:background="@color/transparent"
+        android:gravity="top|left"
+        android:hint="@string/input_content"
+        android:imeOptions="actionDone"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_16"
+        android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+        android:padding="@dimen/space_8" />
+</LinearLayout>

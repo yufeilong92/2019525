@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_net_play_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.net.NetBookInfomActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView style="@style/TitleBarText" />
+
+        <ImageView
+            android:id="@+id/iv_net_book_down"
+            style="@style/TitleBarAction"
+            />
+
+    </LinearLayout>
+<LinearLayout
+    android:visibility="gone"
+    android:id="@+id/ll_content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_center_player_height"
+            android:background="@color/top_text_color_black">
+
+            <com.easefun.polyvsdk.video.PolyvVideoView
+                android:id="@+id/polyv_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.xuechuan.xcedu.player.player.PolyvPlayerLightView
+                android:id="@+id/polyv_player_light_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <com.xuechuan.xcedu.player.player.PolyvPlayerVolumeView
+                android:id="@+id/polyv_player_volume_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <com.xuechuan.xcedu.player.player.PolyvPlayerProgressView
+                android:id="@+id/polyv_player_progress_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <!-- 跑马灯 -->
+            <com.easefun.polyvsdk.marquee.PolyvMarqueeView
+                android:id="@+id/polyv_marquee_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000" />
+
+            <com.xuechuan.xcedu.player.player.PolyvPlayerMediaController
+                android:id="@+id/polyv_player_media_controller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <!-- 视频在加载过程中显示的进度条 -->
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_play_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:id="@+id/iv_net_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_200"
+                    android:src="@mipmap/banner" />
+
+                <ImageView
+                    android:id="@+id/iv_net_book_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/c_np_icon_try" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_net_book_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/text_size_16"
+            android:paddingRight="@dimen/text_size_16"
+            android:text="2222"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_18" />
+
+        <View
+            android:visibility="gone"
+            style="@style/view_line_10_gray" />
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/net_magic_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48" />
+
+        <com.xuechuan.xcedu.weight.NoScrollViewPager
+            android:id="@+id/vp_net_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_net_buy_layou"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="58dp">
+        <View style="@style/view_line_tab_line" />
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/text_size_16"
+            android:paddingRight="@dimen/text_size_16">
+
+            <TextView
+                android:id="@+id/tv_net_book_allprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textColor="@color/red_text"
+                android:textSize="@dimen/text_size_20" />
+
+            <TextView
+                android:id="@+id/tv_net_contact_service"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@mipmap/c_n_p_icon_service"
+                android:drawablePadding="@dimen/space_8"
+                android:gravity="center_vertical"
+                android:text="@string/custom_service"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/space_16"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:layout_marginTop="@dimen/space_16"
+                android:background="@color/login_line_color" />
+
+            <Button
+                android:id="@+id/btn_net_go_buy"
+                android:layout_width="110dp"
+                android:layout_height="32dp"
+                android:background="@drawable/btn_login_bg_normal"
+                android:paddingLeft="@dimen/space_8"
+                android:text="@string/do_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    <TextView
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/text_title_color"
+        android:gravity="center"
+        android:id="@+id/tv_empty"
+        android:visibility="gone"
+        android:text="@string/no_xg_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

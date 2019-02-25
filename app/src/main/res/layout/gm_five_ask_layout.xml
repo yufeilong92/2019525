@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_four_evaluate_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/space_16"
+    android:layout_marginRight="@dimen/space_16"
+    android:layout_marginTop="@dimen/space_16"
+    android:orientation="vertical">
+
+    <com.xuechuan.xcedu.weight.ContentEditText
+        android:id="@+id/et_gm_five_evaluate_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spance_120"
+        android:layout_gravity="center_vertical"
+        android:background="@color/transparent"
+        android:gravity="top"
+        android:hint="@string/et_input_answer"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+        android:minLines="5"
+        android:padding="@dimen/space_8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14"  />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_gmfive_lookjiexi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

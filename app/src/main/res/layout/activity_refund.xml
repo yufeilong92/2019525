@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:id="@+id/refund_root"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.me.RefundActivity">
+
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/refund" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <TextView
+                    style="@style/text_title_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/refund_goods"
+                    android:textStyle="bold" />
+
+                <Space style="@style/space_20_height" />
+
+                <include layout="@layout/item_take_layout" />
+
+                <Space style="@style/space_20_height" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_title_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/number_of_refunds"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:background="@mipmap/red"
+                        android:id="@+id/iv_refund_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_30"
+                        />
+
+                    <TextView
+
+                        android:id="@+id/tv_refund_number"
+                        android:layout_width="@dimen/space_30"
+                        android:layout_height="@dimen/space_30"
+                        android:layout_marginLeft="@dimen/space_8"
+                        android:background="@drawable/tv_sure"
+                        android:gravity="center"
+                        android:text="1" />
+
+                    <ImageButton
+                        android:id="@+id/iv_refund_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/space_8"
+                        android:background="@mipmap/add" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/ll_remarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:alpha="0.8"
+                        android:background="@color/refund_red_bg"
+                        android:padding="@dimen/space_4"
+                        android:text="已经发货商品退款需退还商品"
+                        android:textColor="@color/red_text" />
+
+                    <TextView
+                        style="@style/text_title_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_10"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:text="@string/express_message"
+                        android:textStyle="bold" />
+
+                    <com.xuechuan.xcedu.weight.ContentEditText
+                        android:id="@+id/et_refund_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/space_60"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/tv_sure"
+                        android:gravity="top"
+                        android:hint="请输入相关快递信息或备注"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                        android:minLines="2"
+                        android:padding="@dimen/space_8"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View style="@style/view_line_10_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        style="@style/text_title_fu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/refund_cause" />
+
+                    <TextView
+                        android:id="@+id/tv_refund_cause"
+                        style="@style/text_title_fu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space_8"
+                        android:drawableRight="@mipmap/ic_more_go"
+                        android:text="@string/refund_reason" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_line_1_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_refund_value"
+                        style="@style/text_title_fu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/refund_value" />
+
+                    <TextView
+                        style="@style/text_title_fu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space_16"
+                        android:text="@string/y" />
+
+                    <TextView
+                        android:id="@+id/tv_refund_value_amount"
+                        style="@style/text_title_fu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/space_16"
+                        android:text="0" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/view_line_1_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_refund_phone"
+                        style="@style/text_title_fu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/phone2" />
+
+                    <EditText
+                        android:id="@+id/et_refund_phone"
+                        style="@style/text_title_fu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:drawablePadding="@dimen/space_16"
+                        android:hint="@string/please_input_phone"
+                        android:inputType="phone"
+                        android:maxLength="11" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/input_bg" />
+
+            <Button
+                android:id="@+id/btn_refund_post"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_48"
+                android:background="@mipmap/ic_m_identify_"
+                android:text="@string/submit_post"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

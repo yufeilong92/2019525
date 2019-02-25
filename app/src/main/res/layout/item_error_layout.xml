@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_error_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="测试"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_error_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/space_8"
+        android:drawableRight="@mipmap/ic_more_go"
+        android:text="3道"
+        android:textColor="@color/text_fu_color"
+        android:textSize="@dimen/text_size_14" />
+    <TextView
+        android:id="@+id/tv_looknumber"
+        android:textSize="@dimen/text_size_11"
+        android:text="1"
+        android:textColor="@color/text_fu_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="@dimen/text_size_11"
+        android:text="@string/sprit"
+        android:textColor="@color/text_fu_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_lookcount"
+        android:textSize="@dimen/text_size_11"
+        android:text="32"
+        android:textColor="@color/text_fu_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

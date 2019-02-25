@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.home.AdvisoryListActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_address_title"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/title_action_height"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingEnd="@dimen/space_8"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_8"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_adviistory_location"
+            style="@style/TitleBarAction"
+            android:src="@mipmap/nav_icon_location" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xrv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_advisory_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/iv_content_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/common_blankimg_ser" />
+    </com.andview.refreshview.XRefreshView>
+</LinearLayout>

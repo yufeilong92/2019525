@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.net.NetBookDowningActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/mydown" />
+
+        <TextView
+            android:id="@+id/tv_net_downing_make"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="@dimen/space_8"
+            android:text="@string/edit"
+            android:textColor="@color/btn_bg_register"
+            android:textSize="@dimen/text_size_18" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_32"
+        android:background="@color/down_ll_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/down_book_video"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_16" />
+
+        <TextView
+            android:id="@+id/tv_net_downing_do"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/available_space"
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_16" />
+
+        <TextView
+            android:id="@+id/tv_downing"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/space_16" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_net_down_empty"
+        android:text="@string/no_down_data"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/input_bg">
+
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rlv_net_downing_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="@dimen/space_48"-->
+        <!--android:background="@color/white" />-->
+        <ListView
+            android:scrollbars="none"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:id="@+id/rlv_net_downing_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/space_48"
+            android:background="@color/white">
+
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_56"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="vertical">
+          <View
+            style="@style/view_line_tab_line"/>
+            <TextView
+                android:id="@+id/tv_net_downing_stop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/start_down"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_net_down_delect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_56"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16"
+                android:paddingBottom="@dimen/space_8"
+              >
+                <CheckBox
+                    android:button="@drawable/select_free_chb_bg"
+                    android:id="@+id/chb_net_down_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/all"
+                    android:paddingLeft="@dimen/space_10"
+                    android:textColor="@color/hint_text"
+                    android:textSize="@dimen/text_size_14" />
+
+                <Button
+                    android:id="@+id/btn_net_down_delect"
+                    android:layout_width="@dimen/space_70"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/space_8"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:background="@drawable/btn_login_bg_normal"
+                    android:text="@string/delect"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

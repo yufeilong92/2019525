@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/everyday_bg"
+    android:orientation="vertical"
+    android:id="@+id/rank_root_layout"
+    tools:context=".ui.bank.newbank.EveryDayActivity">
+
+    <com.xuechuan.xcedu.weight.WeiNestedScrollView
+        android:id="@+id/weiNestsv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/qb_mei_bg"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_24">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_everyday_back"
+                        android:layout_width="@dimen/space_48"
+                        android:layout_height="@dimen/space_48"
+                        android:padding="@dimen/space_10"
+                        android:src="@mipmap/nav_icon_back_w" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="每日一练"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_everyday_calendar"
+                        android:layout_width="@dimen/space_48"
+                        android:layout_height="@dimen/space_48"
+                        android:padding="@dimen/space_10"
+                        android:src="@mipmap/qb_mei_cal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/space_16"
+                    android:background="@drawable/bg_login_li"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_16">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/space_20"
+                            android:layout_height="1dp"
+                            android:background="@color/book_line" />
+
+                        <TextView
+                            android:id="@+id/tv_everyday_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space_8"
+                            android:paddingRight="@dimen/space_8"
+                            android:text="2019-01-01"
+                            android:textColor="@color/text_fu_color"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <View
+                            android:layout_width="@dimen/space_20"
+                            android:layout_height="1dp"
+                            android:background="@color/book_line" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_everyday_keyword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:gravity="center"
+                        android:text="建筑防火规范"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_everyday_textnumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="60sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/space_4"
+                            android:text="@string/dao"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/text_size_12"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_everyday_start_text"
+                        android:layout_width="@dimen/space_150"
+                        android:layout_height="@dimen/space_48"
+                        android:layout_gravity="center"
+                        android:background="@drawable/everyday_main_btn_bg"
+                        android:paddingLeft="@dimen/space_30"
+                        android:paddingRight="@dimen/space_30"
+                        android:text="@string/start_text"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:src="@mipmap/qb_mei_phb" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rlv_everyday_ranking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/space_8"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16" />
+
+            <include layout="@layout/empty" />
+        </LinearLayout>
+    </com.xuechuan.xcedu.weight.WeiNestedScrollView>
+</LinearLayout>

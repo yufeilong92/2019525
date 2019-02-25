@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/transparent"
+    android:padding="@dimen/space_32">
+    <LinearLayout
+        android:layout_width="@dimen/space_100"
+        android:gravity="center"
+        android:padding="@dimen/space_16"
+        android:alpha="0.8"
+        android:background="@drawable/dialog_dialog_bg"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginBottom="@dimen/space_6"
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="222222"
+            android:textSize="@dimen/text_regular_big"
+            android:textColor="@color/hint_text"
+            android:visibility="gone" />
+        <ProgressBar
+            android:visibility="gone"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:id="@+id/iv_dialog_progress"
+            android:layout_width="wrap_content"
+            android:background="@drawable/dialog_dialog_bg"
+            android:layout_height="@dimen/spance_50" />
+        <TextView
+            android:layout_marginTop="@dimen/space_6"
+            android:textColor="@color/white"
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/submit_loading"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+</RelativeLayout>

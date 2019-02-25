@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+
+        <TextView
+            android:id="@+id/tv_hankpick_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_8"
+            android:paddingBottom="@dimen/space_8"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text="222222"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/space_8"
+            android:id="@+id/ll_hankpick_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_hankpick_one"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/speca_105dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/s_n" />
+
+            <ImageView
+                android:id="@+id/img_hankpick_two"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/speca_105dp"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_marginRight="@dimen/space_8"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/s_n" />
+
+            <ImageView
+                android:id="@+id/img_hankpick_three"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/speca_105dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/s_n" />
+        </LinearLayout>
+
+        <TextView
+            android:paddingBottom="@dimen/space_8"
+            android:id="@+id/tv_hankpick_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="仓库"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginRight="@dimen/space_16"
+        android:layout_marginLeft="@dimen/space_16"
+        style="@style/view_line_1_gray" />
+</LinearLayout>

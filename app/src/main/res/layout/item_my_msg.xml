@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_16"
+    android:layout_marginTop="@dimen/space_16"
+    android:paddingBottom="@dimen/space_16"
+    android:paddingTop="@dimen/space_16">
+
+    <ImageView
+        android:id="@+id/iv_my_msg_img"
+        android:layout_width="@dimen/space_48"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginRight="@dimen/space_8"
+        android:scaleType="fitXY"
+        android:src="@mipmap/common_icon_defaultpicture_mini" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_my_msg_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="7"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="张三张三张三张三张三张三"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_16"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_m_p_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_8"
+                android:layout_weight="1"
+                android:minEms="4"
+                android:text="点赞了你"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tv_my_msg_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_8"
+                android:paddingBottom="@dimen/space_4"
+                android:paddingLeft="@dimen/space_8"
+                android:paddingTop="@dimen/space_4"
+                android:text="21分钟"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_my_msg_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_8"
+            android:background="@color/input_bg"
+            android:ellipsize="end"
+            android:padding="@dimen/space_8"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_m_p_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:drawableEnd="@mipmap/ic_more_go"
+            android:drawablePadding="@dimen/space_8"
+            android:drawableRight="@mipmap/ic_more_go"
+            android:text="@string/look"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+
+</LinearLayout>

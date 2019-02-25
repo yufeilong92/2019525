@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_8"
+        android:background="@color/input_bg"
+        android:layout_weight="1"
+        android:id="@+id/tv_bookhome_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/space_20"
+        android:paddingTop="@dimen/space_20"
+        android:text="第一章"
+        android:textSize="@dimen/text_size_14" />
+
+    <View style="@style/view_line_1_gray_jia" />
+
+    <!--    <TextView
+               android:id="@+id/tv_bookhome_order_content"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="标题" />-->
+
+</LinearLayout>

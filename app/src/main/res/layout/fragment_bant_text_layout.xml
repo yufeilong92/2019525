@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gm_rool_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!--  <com.xuechuan.xcedu.weight.WeiNestedScrollView
+          android:id="@+id/smsv_layout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fillViewport="true"
+          android:scrollbarTrackVertical="@color/transparent"
+          android:scrollbars="none">-->
+    <com.xuechuan.xcedu.weight.SmartScrollView
+        android:id="@+id/smsv_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--阅读布局-->
+                <include layout="@layout/gm_home_read_text_layout" />
+                <!--题干布局-->
+                <include layout="@layout/gm_zone_question_title_layout" />
+                <!--正常选项-->
+                <include layout="@layout/gm_one_read_text_layout" />
+                <!--购买布局-->
+                <include layout="@layout/answer_layout_buy" />
+                <!--解析布局-->
+                <include layout="@layout/gm_two_analysis_layout" />
+                <!--笔记布局-->
+                <include layout="@layout/gm_three_note_layout" />
+                <!--评价布局-->
+                <include layout="@layout/gm_four_evaluate_layout" />
+                <!--简答布局-->
+                <include layout="@layout/gm_seven_answer_layout" />
+            </LinearLayout>
+    </com.xuechuan.xcedu.weight.SmartScrollView>
+    <!--</com.xuechuan.xcedu.weight.WeiNestedScrollView>-->
+
+    <include layout="@layout/empty" />
+
+    <include layout="@layout/gm_bar" />
+</LinearLayout>

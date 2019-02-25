@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_16">
+
+        <CheckBox
+            android:id="@+id/rdb_gmsetting_day"
+            android:layout_width="@dimen/space_70"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/space_6"
+            android:drawableTop="@drawable/select_b_set_day"
+            android:gravity="center_horizontal"
+            android:text="@string/day_type"
+            android:textColor="@color/text_fu_color" />
+
+        <CheckBox
+            android:id="@+id/rdb_gmsetting_night"
+            android:layout_width="@dimen/space_70"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/space_6"
+            android:drawableTop="@drawable/select_b_set_night"
+            android:gravity="center_horizontal"
+            android:text="@string/night_type"
+            android:textColor="@color/text_fu_color" />
+
+        <CheckBox
+            android:id="@+id/rdb_gmsetting_eye"
+            android:layout_width="@dimen/space_70"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/space_6"
+            android:drawableTop="@drawable/select_b_set_eye"
+            android:gravity="center_horizontal"
+            android:text="@string/eye_type"
+            android:textColor="@color/text_fu_color" />
+    </LinearLayout>
+
+    <View style="@style/view_line_1_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_16">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/right_go_next"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/swt_gmselect_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_pop_swt_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/a"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold" />
+
+        <com.etiennelawlor.discreteslider.library.ui.DiscreteSlider
+            android:id="@+id/discrete_slider"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="@dimen/space_48"
+            android:layout_marginBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            app:backdropFillColor="@color/gm_gray"
+            app:backdropStrokeColor="@color/gm_gray"
+            app:backdropStrokeWidth="1dp"
+            app:horizontalBarThickness="4dp"
+            app:tickMarkCount="5"
+            app:tickMarkRadius="8dp"
+            app:position="1"
+            app:thumb="@drawable/thumb"
+            app:progressDrawable="@drawable/transparent_progress_drawable"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/a"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginLeft="@dimen/space_16"
+        android:gravity="center_vertical"
+        android:text="@string/delect_right_number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14" />
+
+    <RadioGroup
+        android:id="@+id/rg_content_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <RadioButton
+            android:id="@+id/rdb_gmpop_one"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_setting_one" />
+
+        <RadioButton
+            android:id="@+id/rdb_gmpop_three"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_setting_three"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rdb_gmpop_five"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_setting_five" />
+
+        <RadioButton
+            android:id="@+id/rdb_gmpop_no"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_setting_delelt" />
+    </RadioGroup>
+
+</LinearLayout>

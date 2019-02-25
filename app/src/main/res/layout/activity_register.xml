@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ui.RegisterActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/regist_phone" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Space style="@style/space_30_height" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="@dimen/spance_36"
+                android:text="@string/phone_text"
+                android:textSize="@dimen/text_size_14" />
+
+            <Space style="@style/space_20_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spance_36"
+                android:paddingRight="@dimen/spance_36">
+
+                <LinearLayout style="@style/li_style">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ic_login_phone" />
+
+                    <EditText
+                        android:id="@+id/et_register_phone"
+                        style="@style/et_style"
+                        android:hint="@string/phone"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="11" />
+                </LinearLayout>
+
+                <Space style="@style/space_20_height" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_48"
+                    android:background="@drawable/bg_login_li"
+                    android:paddingLeft="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_login_code" />
+
+                    <EditText
+                        android:id="@+id/et_register_code"
+                        style="@style/et_style"
+                        android:layout_weight="1"
+                        android:hint="@string/code"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="4" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_8"
+                        android:layout_marginTop="@dimen/space_8"
+                        android:background="@color/gray_text" />
+
+                    <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="@dimen/spance_120"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:text="@string/send_code"
+                        android:textColor="@color/red_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space style="@style/space_30_height" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spance_36"
+                android:text="@string/paw_setting"
+                android:textSize="@dimen/text_size_14" />
+
+            <Space style="@style/space_20_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spance_36"
+                android:paddingRight="@dimen/spance_36">
+
+
+                <LinearLayout style="@style/li_style">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_login_password" />
+
+                    <EditText
+                        android:id="@+id/et_register_paw"
+                        style="@style/et_style"
+                        android:layout_weight="1"
+                        android:hint="@string/user_password"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword" />
+
+                    <CheckBox
+                        android:id="@+id/chb_show_pasw"
+                        style="@style/chb_paw" />
+                </LinearLayout>
+
+                <Space style="@style/space_20_height" />
+
+                <LinearLayout style="@style/li_style">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_login_password" />
+
+                    <EditText
+                        android:id="@+id/et_register_paws"
+                        style="@style/et_style"
+                        android:layout_weight="1"
+                        android:hint="@string/sure_password"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword" />
+
+                    <CheckBox
+                        android:id="@+id/chb_show_passw"
+                        style="@style/chb_paw" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_register_agreem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/spance_36"
+                android:layout_marginRight="@dimen/spance_36"
+                >
+
+                <CheckBox
+                    android:id="@+id/chb_register_agreen"
+                    android:layout_width="@dimen/space_20"
+                    android:layout_height="@dimen/space_20"
+                    android:button="@drawable/select_chb_rab_bg" />
+
+                <TextView
+                    android:textColor="@color/text_fu_color"
+                    android:layout_marginLeft="@dimen/space_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reading_consent" />
+
+                <TextView
+                    android:id="@+id/tv_regiths_agreem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/protocol"
+                    android:textColor="@color/red_text" />
+
+            </LinearLayout>
+
+            <Space style="@style/space_20_height" />
+
+            <Button
+                android:id="@+id/btn_register_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_48"
+                android:layout_marginLeft="@dimen/spance_36"
+                android:layout_marginRight="@dimen/spance_36"
+                android:background="@drawable/btn_login_bg_normal"
+                android:text="@string/bingphone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

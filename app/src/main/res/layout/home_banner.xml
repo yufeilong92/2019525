@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.youth.banner.Banner
+            android:id="@+id/ban_home"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_250" />
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/space_24"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/space_10"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_48"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+                <com.xuechuan.xcedu.weight.AddressTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_home_address_view"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_8"
+                    android:paddingTop="@dimen/space_8"
+                    android:paddingBottom="@dimen/space_8"
+                    android:paddingRight="2dp"
+                    android:text="@string/nationwide"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16" />
+                <ImageView
+                    android:src="@mipmap/nav_icon_ptr"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="@dimen/space_16"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/ll_home_serach"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/space_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_home_search_bg"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/space_22"
+                        android:layout_height="@dimen/space_22"
+                        android:layout_marginLeft="@dimen/space_16"
+                        android:layout_marginRight="@dimen/space_8"
+                        android:src="@mipmap/nav_icon_search2" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/space_32"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/home_select_content"
+                        android:textColor="@color/hint_text"
+                        android:textSize="@dimen/text_size_14" />
+                         </LinearLayout>
+                <ImageView
+                    android:id="@+id/iv_home_scan"
+                    android:paddingLeft="@dimen/space_8"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/nav_icon_saoma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/space_8" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

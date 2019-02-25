@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ui.me.PersionActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_m_p_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_action_height"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:text="@string/save"
+            android:textColor="@color/red_text"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_titel_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <RelativeLayout
+            android:id="@+id/rl_m_p_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_100">
+
+            <ImageView
+                android:id="@+id/iv_m_p_img"
+                android:layout_width="@dimen/space_64"
+                android:layout_height="@dimen/space_64"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_m_hear" />
+
+            <ImageView
+                style="@style/m_more"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_m_p_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/m_title"
+                android:text="@string/nickname" />
+
+            <Space style="@style/space_20_width" />
+
+            <EditText
+                android:maxLength="7"
+                android:id="@+id/et_m_p_name"
+                style="@style/m_name"
+                android:paddingLeft="@dimen/space_16"
+                />
+
+            <ImageView
+                android:visibility="gone"
+                style="@style/m_more"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:id="@+id/li_m_p_sex"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/m_title"
+                android:text="@string/sex" />
+
+            <Space style="@style/space_20_width" />
+
+            <!--  <TextView
+                  android:id="@+id/tv_m_p_sex"
+                  style="@style/m_name"
+                  android:paddingLeft="@dimen/space_16"
+                  android:text="男" />-->
+            <RadioGroup
+                android:layout_marginLeft="@dimen/space_16"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdb_m_p_boy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/select_m_sex_boy" />
+
+                <RadioButton
+                    android:id="@+id/rdb_m_p_girl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_8"
+                    android:button="@drawable/select_m_sex_girl" />
+            </RadioGroup>
+
+            <ImageView
+                android:visibility="gone"
+                style="@style/m_more"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_m_p_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/m_title"
+                android:text="@string/birthday" />
+
+            <Space style="@style/space_20_width" />
+
+            <TextView
+                android:id="@+id/tv_m_p_birthday"
+                style="@style/m_name"
+                android:paddingLeft="@dimen/space_16"
+                android:text="" />
+
+            <ImageView
+                style="@style/m_more"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_m_p_city"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/m_title"
+                android:text="@string/city" />
+
+            <Space style="@style/space_20_width" />
+
+            <TextView
+                android:id="@+id/tv_m_p_city"
+                style="@style/m_name"
+                android:paddingLeft="@dimen/space_16"
+                android:text="" />
+
+            <ImageView
+                style="@style/m_more"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_m_p_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_60"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/m_title"
+                android:text="@string/phone_m" />
+
+            <Space style="@style/space_20_width" />
+
+            <TextView
+                android:id="@+id/tv_m_p_phone"
+                style="@style/m_name"
+                android:text="" />
+
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+    </LinearLayout>
+</LinearLayout>

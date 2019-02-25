@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_gmeight_jianda_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/text_size_16"
+    android:paddingRight="@dimen/text_size_16"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btn_gm_eight_look_jiexi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_48"
+        android:layout_marginRight="@dimen/space_48"
+        android:layout_marginTop="@dimen/space_48"
+        android:background="@drawable/btn_look_answer_bg"
+        android:text="@string/look_analyze"
+        android:textSize="@dimen/text_size_16"
+         />
+    <LinearLayout
+        android:id="@+id/ll_gm_eight_look_jiexi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space_32"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_gm_eight_answer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/text_size_16"
+            android:paddingRight="@dimen/text_size_16"
+            android:text="@string/answer"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_gm_eight_answer_title_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size_16"
+            android:paddingLeft="@dimen/text_size_16"
+            android:paddingRight="@dimen/text_size_16"
+            android:text="" />
+    </LinearLayout>
+</LinearLayout>

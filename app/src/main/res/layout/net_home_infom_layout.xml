@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_title_root"
+    android:layout_marginTop="@dimen/space_24"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/TitleBar"
+        android:layout_height="@dimen/space_48">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_tab_net_infom"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:textColor="@color/text_title_color"
+            android:layout_weight="1"
+            android:textSize="@dimen/text_size_18"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusableInTouchMode="true"
+            />
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magicindicator_home_infom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_39" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_net_home_infom_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/space_48"
+        android:layout_height="match_parent" />
+</LinearLayout>

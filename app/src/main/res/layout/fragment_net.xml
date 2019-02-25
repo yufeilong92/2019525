@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    android:orientation="vertical"
+    tools:context=".fragment.net.NetFragment">
+
+    <LinearLayout
+        style="@style/TitleBar"
+        android:layout_marginTop="@dimen/space_24"
+        >
+
+        <ImageView
+            style="@style/TitleBarAction"
+             />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/net_book" />
+
+        <ImageView
+            android:id="@+id/iv_net_mydown"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="match_parent"
+            android:src="@mipmap/c_nav_icon_myd" />
+        <ImageView
+
+            android:id="@+id/iv_net_all"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/space_16"
+            android:src="@mipmap/c_nav_icon_all" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_titel_line" />
+    <include layout="@layout/net_layout_buy" />
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/spance_50"
+        android:id="@+id/ll_no_buy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:padding="@dimen/space_8"
+            android:layout_width="@dimen/space_100"
+            android:layout_height="@dimen/space_100"
+            android:src="@mipmap/common_blankimg_course" />
+        <TextView
+            android:text="@string/user_no_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_marginTop="@dimen/space_32"
+            android:id="@+id/btn_net_go_look"
+            android:layout_width="@dimen/spance_120"
+            android:layout_height="@dimen/space_32"
+            android:background="@drawable/btn_login_bg_normal"
+            android:text="@string/go_look"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

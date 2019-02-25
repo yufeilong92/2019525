@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_live_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+         android:layout_marginBottom="@dimen/space_16"
+        android:id="@+id/rl_layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100">
+
+        <ImageView
+            android:id="@+id/iv_home_live"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@mipmap/s_n" />
+        <com.felipecsl.gifimageview.library.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@mipmap/s_n"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/li_live_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_20"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/bg_home_live_time"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_8">
+
+            <ImageView
+                android:id="@+id/ic_home_live_logon"
+                android:layout_width="@dimen/spance_12"
+                android:layout_height="@dimen/spance_12"
+                android:src="@mipmap/ic_home_live_time" />
+
+            <TextView
+                android:id="@+id/tv_home_live_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:text="@string/live_count"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tv_home_live_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_4"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

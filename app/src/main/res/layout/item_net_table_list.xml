@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_48"
+    android:paddingLeft="@dimen/space_16"
+    android:paddingRight="@dimen/space_16"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:gravity="center_vertical"
+        android:id="@+id/chb_net_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/select_net_play_bg"
+        />
+
+    <TextView
+        android:id="@+id/tv_net_title"
+        android:paddingLeft="@dimen/space_8"
+        android:textColor="@color/text_fu_color"
+        android:textSize="@dimen/text_size_14"
+        android:text="sssss"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48" />
+
+    <ImageView
+        android:gravity="center_vertical"
+        android:src="@mipmap/ic_more_go"
+        android:id="@+id/iv_net_goorbuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

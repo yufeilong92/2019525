@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.YouZanActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+           android:id="@+id/iv_back"
+            android:src="@mipmap/ic_back"
+            />
+
+        <TextView
+            style="@style/TitleBarText"
+             />
+
+        <ImageView style="@style/TitleBarAction" />
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+    <com.youzan.androidsdk.basic.YouzanBrowser
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_agreenment_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        />
+</LinearLayout>

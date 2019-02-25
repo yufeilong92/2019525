@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ui.me.LogisticsActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/logistics" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/li_address_warning"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_32"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/space_16"
+                android:layout_marginLeft="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_16"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_infom_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tv_infom_order_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/space_10"
+                    android:paddingRight="@dimen/space_10"
+                    android:text="@string/customer_service"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_11" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_phone_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:paddingRight="@dimen/space_16"
+                    android:src="@mipmap/ic_phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_name_title_wuliu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_56"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_16"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tv_logistics_make"
+                    style="@style/text_title_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="" />
+
+                <TextView
+                    style="@style/text_title_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=":" />
+
+                <TextView
+                    android:id="@+id/tv_logistics_number"
+                    style="@style/text_title_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space_6"
+                    android:text="" />
+            </LinearLayout>
+
+            <View style="@style/view_line_1_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/space_8"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16"
+                android:paddingTop="@dimen/space_8">
+
+                <TextView
+                    android:id="@+id/tv_logistics_name"
+                    style="@style/text_title_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_logistics_phone"
+                    style="@style/text_title_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/space_16"
+                    android:text=""
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_logistics_address"
+                style="@style/text_title_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16"
+                android:text="" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_logistics_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/space_16"
+                    android:paddingLeft="@dimen/space_16"
+                    android:paddingRight="@dimen/space_16"
+                    android:paddingTop="@dimen/space_8" />
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/v_barkground"
+                    android:layout_marginTop="@dimen/space_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/input_bg" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

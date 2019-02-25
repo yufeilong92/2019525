@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_exam_history_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:gravity="center_vertical"
+        android:text="2018"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用时"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_exam_history_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:text="1:1:1"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <View style="@style/gray_1dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+            android:text="得分"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_exam_history_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:text="0"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line_1_gray"
+        android:layout_marginBottom="@dimen/space_8"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_exam_histroy_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/mine_ksjl_chz"
+                android:drawablePadding="@dimen/space_2"
+                android:text="@string/again_exam" />
+        </RelativeLayout>
+
+        <View style="@style/gray_1dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_exam_histroy_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/mine_ksjl_dtjg"
+                android:drawablePadding="@dimen/space_2"
+                android:text="@string/delect" />
+        </RelativeLayout>
+
+        <View style="@style/gray_1dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_exam_histroy_jiexi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableLeft="@drawable/mine_ksjl_jx"
+                android:drawablePadding="@dimen/space_2"
+                android:text="@string/analyze" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/view_line_10_gray"
+        android:layout_marginTop="@dimen/space_16" />
+</LinearLayout>

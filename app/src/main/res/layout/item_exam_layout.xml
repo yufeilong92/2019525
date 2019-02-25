@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:background="@drawable/ll_exam_bg"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/space_16"
+            android:src="@mipmap/ic_node" />
+        <TextView
+            android:id="@+id/tv_exam_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:text="2017注册" />
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_4" />
+
+</LinearLayout>

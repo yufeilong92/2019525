@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.me.PawChangerActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/changerrpaw" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_titel_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_30"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:text="@string/rawpaw"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_18" />
+
+    <EditText
+        android:hint="@string/old_paw"
+        android:id="@+id/et_m_p_old_paw"
+        android:paddingLeft="@dimen/space_8"
+        android:paddingRight="@dimen/space_8"
+        android:textSize="@dimen/text_size_14"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@color/input_bg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_30"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:text="@string/newpaw"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_18" />
+
+    <Space style="@style/space_20_height" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/et_m_p_new_paw"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:background="@color/input_bg"
+        android:hint="@string/please_new_paw"
+        android:paddingLeft="@dimen/space_8"
+        android:paddingRight="@dimen/space_8"
+        android:textSize="@dimen/text_size_14" />
+
+    <Space style="@style/space_20_height" />
+
+    <EditText
+        android:inputType="textPassword"
+        android:id="@+id/et_m_p_new_paw1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:background="@color/input_bg"
+        android:hint="@string/sure_new_password"
+        android:paddingLeft="@dimen/space_8"
+        android:paddingRight="@dimen/space_8"
+        android:textSize="@dimen/text_size_14" />
+
+    <Button
+        android:id="@+id/btn_m_p_cp_submit"
+        android:text="@string/changerrpaw"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18"
+        android:layout_marginTop="@dimen/space_60"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spance_50"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:background="@drawable/btn_login_bg_normal" />
+</LinearLayout>

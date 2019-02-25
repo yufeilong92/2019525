@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <com.xuechuan.xcedu.weight.NoScrollViewPager
+        android:id="@+id/viewpage_contetn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/title_line_style" />
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magicindicator_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_56" />
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.me.FeedBackActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_56"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_16"
+        android:textSize="@dimen/text_size_18"
+        android:paddingRight="@dimen/space_16"
+        android:text="@string/your_opinion" />
+
+    <EditText
+        android:id="@+id/et_m_feed_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_100"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:background="@color/input_bg"
+        android:textColor="@color/black"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_14"
+        android:hint="@string/add_fack"
+        android:padding="@dimen/space_6" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/space_16"
+        android:textSize="@dimen/text_size_18"
+        android:paddingRight="@dimen/space_16"
+        android:text="@string/practice_mode" />
+
+    <EditText
+        android:id="@+id/et_m_feed_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:textColor="@color/black"
+        android:background="@color/input_bg"
+        android:hint="@string/phoneorweixin"
+        android:textSize="@dimen/text_size_14"
+        android:padding="@dimen/space_6" />
+    <Button
+        android:id="@+id/btn_m_feed_submit"
+        android:layout_marginTop="@dimen/space_70"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginLeft="@dimen/space_16"
+        android:layout_marginRight="@dimen/space_16"
+        android:background="@drawable/btn_login_bg_normal"
+        android:text="@string/submit_feedback"
+        android:textSize="@dimen/text_size_16"
+        android:textColor="@color/white" />
+</LinearLayout>

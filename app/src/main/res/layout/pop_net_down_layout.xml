@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_20">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space_20"
+        android:paddingRight="@dimen/space_20">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spance_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/chb_net_pop_down_chao"
+                android:layout_width="@dimen/space_60"
+                android:layout_height="@dimen/space_30"
+                android:background="@drawable/select_net_pop_clarity_btn"
+                android:button="@null"
+
+                android:gravity="center"
+                android:padding="@dimen/space_4"
+                android:text="@string/Super_clear"
+                android:textColor="@drawable/select_net_pop_rdb_textcolor"
+                android:textSize="@dimen/text_size_16" />
+
+            <RadioButton
+                android:id="@+id/chb_net_pop_down_gao"
+                android:layout_width="@dimen/space_60"
+                android:layout_height="@dimen/space_30"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:background="@drawable/select_net_pop_clarity_btn"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/space_4"
+                android:text="@string/high_definition"
+                android:checked="true"
+                android:textColor="@drawable/select_net_pop_rdb_textcolor"
+                android:textSize="@dimen/text_size_16" />
+
+            <RadioButton
+                android:id="@+id/chb_net_pop_down_liu"
+                android:layout_width="@dimen/space_60"
+                android:layout_height="@dimen/space_30"
+                android:background="@drawable/select_net_pop_clarity_btn"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/easy_chang"
+                android:textColor="@drawable/select_net_pop_rdb_textcolor"
+                android:textSize="@dimen/text_size_16" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_net_pop_back"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="@dimen/space_48"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/space_10"
+            android:src="@mipmap/common_download_icon_close" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_table_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/space_48"
+            android:paddingLeft="@dimen/space_20"
+            android:paddingRight="@dimen/space_20" />
+
+        <TextView
+            android:id="@+id/tv_net_pop_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_book"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_56"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View style="@style/view_line_tab_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_pop_down_down"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_pop_down_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/cancel"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_16"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_pop_down_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/all"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space_4"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:background="@color/login_line_color" />
+
+                <Button
+                    android:id="@+id/btn_pop_down_look"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/look_my_down"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <Button
+                    android:id="@+id/btn_pop_down_run"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/downing"
+                    android:textColor="@color/red_text"
+                    android:textSize="@dimen/text_size_16"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_pop_down_sure_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="@string/all_down"
+                    android:textColor="@color/red_text"
+                    android:textSize="@dimen/text_size_16"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

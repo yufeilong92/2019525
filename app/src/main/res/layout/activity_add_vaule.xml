@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.me.AddVauleActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <ImageView
+        android:layout_width="@dimen/space_180"
+        android:layout_height="@dimen/space_180"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_30"
+        android:src="@mipmap/ic_m_added_img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spance_50"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginRight="@dimen/space_30"
+        android:background="@drawable/et_m_input_bg"
+        android:orientation="horizontal">
+        <EditText
+            android:padding="@dimen/space_8"
+            android:id="@+id/et_m_add_code"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spance_50"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:background="@drawable/et_m_input_bg"
+            android:hint="@string/exchange_code"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/iv_code_add_ec"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="@dimen/space_22"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/space_16"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_code_twoqr" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_m_add_value"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spance_50"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginRight="@dimen/space_30"
+        android:layout_marginTop="@dimen/space_20"
+        android:background="@mipmap/ic_m_added"
+        android:text="@string/sure_exchange"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18" />
+</LinearLayout>

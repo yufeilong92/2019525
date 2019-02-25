@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/space_16"
+    android:paddingRight="@dimen/space_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_16"
+        android:paddingTop="@dimen/space_16">
+
+
+        <ImageView
+            android:id="@+id/iv_result_book_img"
+            android:layout_width="@dimen/space_90"
+            android:layout_height="@dimen/space_90"
+            android:scaleType="fitXY"
+            android:src="@mipmap/s_n" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_reuslt_book_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_48"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="222"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_reuslt_book_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="222"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y"
+                    android:textColor="@color/red_text"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_result_book_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/red_text"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/view_line_1_gray" />
+</LinearLayout>

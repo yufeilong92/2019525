@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.net.NetMyBookVualueFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_root_mybook"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.andview.refreshview.XRefreshView
+            android:id="@+id/xrfv_speca_refresh"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/space_56"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rlv_speca_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_net_empty_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/no_evalue" />
+
+        </com.andview.refreshview.XRefreshView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/space_4"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+            <View style="@style/view_line_tab_line" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/et_net_book_evalue"
+                    android:layout_marginBottom="@dimen/space_8"
+                    android:layout_marginLeft="@dimen/space_8"
+                    android:layout_marginRight="@dimen/space_8"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:hint="@string/et_hint"
+                    android:textSize="@dimen/text_size_12"
+                    android:minLines="2"
+                    android:maxLines="4"
+                    android:textColor="@color/text_fu_color"
+                    android:paddingLeft="@dimen/space_8"
+                    android:paddingRight="@dimen/space_8"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_home_search_bg"
+                    android:gravity="center_vertical" />
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_net_book_send"
+                    android:background="@mipmap/common_com_send"
+                    android:layout_width="@dimen/space_48"
+                    android:layout_height="@dimen/space_48" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

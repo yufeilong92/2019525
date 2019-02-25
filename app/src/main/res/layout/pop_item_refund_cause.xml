@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/refund_cause_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/space_16">
+
+    <TextView
+        style="@style/text_title_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退款原因"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_case_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/space_16" />
+</LinearLayout>

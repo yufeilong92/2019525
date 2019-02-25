@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/li_search_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/space_16"
+    android:paddingLeft="@dimen/space_16"
+    android:paddingRight="@dimen/space_16"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_search_history"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:padding="@dimen/space_8"
+            android:id="@+id/iv_search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:src="@mipmap/ic_delect_gray" />
+
+    </RelativeLayout>
+
+    <com.xuechuan.xcedu.weight.FlowLayout
+        android:id="@+id/fl_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/host_nominate"
+            android:textColor="@color/hint_text"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <com.xuechuan.xcedu.weight.FlowLayout
+        android:id="@+id/fl_search_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

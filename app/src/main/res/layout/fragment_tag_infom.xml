@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.home.TagInfomFragment">
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xfv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:id="@+id/rlv_infom_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/tv_listEmpty"
+            android:text="@string/no_xg_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.andview.refreshview.XRefreshView>
+</FrameLayout>

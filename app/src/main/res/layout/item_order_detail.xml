@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_take_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_apply_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginBottom="@dimen/space_10"
+        android:orientation="horizontal">
+
+        <Button
+            android:gravity="center"
+            android:id="@+id/btn_progress_logistics"
+            style="@style/text_title_fu"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/space_30"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_select_answer_btn_ss"
+            android:padding="@dimen/space_4"
+            android:text="@string/logistics" />
+
+        <Button
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/space_8"
+            android:id="@+id/btn_progress_refund"
+            style="@style/text_title_fu"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/space_30"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_select_answer_btn_ss"
+            android:padding="@dimen/space_4"
+            android:text="@string/refund" />
+        <Button
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/space_8"
+            android:id="@+id/btn_progress_sure"
+            style="@style/text_title_fu"
+            android:textColor="@color/red_text"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/space_30"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_select_answer_evalue"
+            android:padding="@dimen/space_4"
+            android:text="@string/confirm_receipt" />
+        <Button
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/space_8"
+            android:id="@+id/btn_refund_progress"
+            style="@style/text_title_fu"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/space_30"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_select_answer_btn_ss"
+            android:padding="@dimen/space_4"
+            android:text="@string/refund_progres" />
+        <Button
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/space_8"
+            android:id="@+id/btn_refund_wait_confirm"
+            style="@style/text_title_fu"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/space_30"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_select_answer_btn_ss"
+            android:padding="@dimen/space_4"
+            android:text="@string/confirm_receipt" />
+    </LinearLayout>
+
+
+</LinearLayout>

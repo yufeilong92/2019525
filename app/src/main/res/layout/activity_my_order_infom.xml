@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/input_bg"
+    tools:context=".ui.me.MyOrderInfomActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/order_detail" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_10_gray" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/space_48"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_fu_color"
+                android:gravity="center_vertical"
+                android:text="@string/ware_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_ordetinfom_name"
+                android:paddingLeft="@dimen/space_16"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_title_color"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/space_4"
+                android:paddingBottom="@dimen/space_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+            style="@style/view_line_1_gray"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48">
+            <TextView
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_fu_color"
+                android:gravity="center_vertical"
+                android:text="@string/order_code1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_ordetinfom_code"
+                android:paddingLeft="@dimen/space_16"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_title_color"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+            style="@style/view_line_1_gray"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48">
+            <TextView
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_fu_color"
+                android:gravity="center_vertical"
+                android:text="@string/order_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_ordetinfom_time"
+                android:paddingLeft="@dimen/space_16"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_title_color"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+            style="@style/view_line_1_gray"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48">
+            <TextView
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_fu_color"
+                android:gravity="center_vertical"
+                android:text="@string/order_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_ordetinfom_price"
+                android:paddingLeft="@dimen/space_16"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_title_color"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+            style="@style/view_line_1_gray"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48">
+            <TextView
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_fu_color"
+                android:gravity="center_vertical"
+                android:text="@string/paytype"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_ordetinfom_type"
+                android:paddingLeft="@dimen/space_16"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/text_title_color"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/speca_170"
+    android:id="@+id/ll_wendao_one_root"
+    android:background="@color/gray_line"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/text_size_16"
+        android:layout_marginRight="@dimen/text_size_16"
+        android:layout_marginTop="@dimen/space_16"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/daiJiejue"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_wenda_dai_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_8"
+            android:text="0"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_wenda_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/space_16"
+        android:layout_marginTop="@dimen/space_8" />
+</LinearLayout>

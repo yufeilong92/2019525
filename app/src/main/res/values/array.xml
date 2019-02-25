@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="search_reasult">
+        <item>题库</item>
+        <item>文章</item>
+        <item>图书</item>
+        <item>网课</item>
+    </string-array>
+    <string-array name="net_home_infom_title">
+        <item>详情</item>
+        <item>目录</item>
+        <item>评价</item>
+    </string-array>
+    <string-array name="bank_tab">
+        <item>技术实务</item>
+        <item>综合能力</item>
+        <item>案例分析</item>
+    </string-array>
+    <string-array name="net_book_title">
+        <item>详情</item>
+        <item>课程表</item>
+    </string-array>
+    <string-array name="net_mybook_title">
+        <item>课程表</item>
+        <item>评价</item>
+    </string-array>
+    <!--    <string-array name="my_order_title">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>已完成</item>
+    </string-array>-->
+    <string-array name="my_order_title">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+    </string-array>
+
+    <string-array name="home_order_title">
+        <item>首页</item>
+        <item>题库</item>
+        <item>网课</item>
+        <item>问答</item>
+        <item>我的</item>
+    </string-array>
+    <string-array name="refund_case">
+        <item>买多/买错/不想要</item>
+        <item>快递无记录</item>
+        <item>少货/空包裹</item>
+        <item>未按约定时间发货</item>
+        <item>快递一直未送达</item>
+        <item>其他</item>
+    </string-array>
+</resources>

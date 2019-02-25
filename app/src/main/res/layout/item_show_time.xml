@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/space_48"
+    android:orientation="vertical"
+    android:padding="@dimen/space_32"
+    android:theme="@style/AlertDialog.AppCompat.Light"
+    app:cardCornerRadius="@dimen/space_8"
+    app:cardElevation="@dimen/space_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_32">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/pop_img_time" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/stop_time"
+            android:textSize="@dimen/text_size_14" />
+
+  <Button
+      android:gravity="center"
+      android:id="@+id/btn_stop_next"
+      android:textColor="@color/white"
+      android:text="@string/next_do_text"
+      android:layout_marginTop="@dimen/space_8"
+      android:background="@drawable/btn_dialog_sure_bg"
+      android:layout_gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="@dimen/space_32" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

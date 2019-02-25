@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.me.GenuineActivity">
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/space_30"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_qr_code"
+        android:layout_marginBottom="@dimen/space_30"
+        android:layout_width="@dimen/space_180"
+        android:layout_height="@dimen/space_180" />
+    <LinearLayout
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginRight="@dimen/space_30"
+        android:background="@drawable/et_m_input_bg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:background="@color/transparent"
+        android:layout_weight="1"
+        android:id="@+id/et_m_g_code"
+        android:paddingLeft="@dimen/space_20"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:layout_gravity="center_vertical"
+        android:paddingRight="@dimen/space_20"
+        android:hint="@string/please_input_code"
+        android:textSize="@dimen/text_size_14"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spance_50" />
+        <ImageView
+            android:id="@+id/iv_code_twoqr"
+            android:layout_marginRight="@dimen/space_16"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_code_twoqr"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/space_22"
+            android:layout_height="@dimen/space_22" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_m_g_value"
+        android:text="@string/do_test"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/white"
+        android:background="@mipmap/ic_m_identify_"
+        android:layout_marginTop="@dimen/space_20"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginRight="@dimen/space_30"
+        android:layout_height="@dimen/spance_50" />
+
+</LinearLayout>

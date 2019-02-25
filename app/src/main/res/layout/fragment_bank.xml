@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.bank.BankFragment">
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+         android:id="@+id/magicindicator_bank"
+        android:layout_marginTop="@dimen/space_24"
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/space_32"
+        android:layout_marginLeft="@dimen/space_32"
+        android:layout_height="@dimen/space_56" />
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_48"
+        android:paddingRight="@dimen/space_48"
+        android:paddingTop="@dimen/space_10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/chb_b_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="技术实务"
+                android:textColor="@drawable/select_b_tab_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <Space style="@style/space_10_height" />
+
+            <ImageView
+                android:id="@+id/iv_b_line_bg"
+                android:layout_width="10dp"
+                android:layout_height="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/chb_b_Colled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="综合能力"
+                android:textColor="@drawable/select_b_tab_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <Space style="@style/space_10_height" />
+
+            <ImageView
+                android:id="@+id/iv_b_line_bg1"
+                android:layout_width="10dp"
+                android:layout_height="2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/chb_b_case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="案例分析"
+                android:textColor="@drawable/select_b_tab_color"
+                android:textSize="@dimen/text_size_16" />
+
+            <Space style="@style/space_10_height" />
+
+            <ImageView
+                android:id="@+id/iv_b_line_bg2"
+                android:layout_width="10dp"
+                android:layout_height="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space style="@style/space_10_height" />-->
+
+    <View style="@style/view_line_1" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpg_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

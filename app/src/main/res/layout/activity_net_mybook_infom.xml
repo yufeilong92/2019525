@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_net_play_my_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.net.NetBookInfomActivity">
+
+
+    <!--
+        <LinearLayout style="@style/TitleBar">
+
+            <ImageView
+                style="@style/TitleBarAction"
+                android:id="@+id/iv_net_book_back"
+                android:src="@mipmap/ic_back"
+                tools:ignore="OnClick" />
+
+            <TextView style="@style/TitleBarText" />
+
+            <ImageView
+                android:id="@+id/iv_net_icon_my_down"
+                style="@style/TitleBarAction"
+                android:src="@mipmap/c_paly_icon_download" />
+
+        </LinearLayout>
+    -->
+
+
+    <RelativeLayout
+        android:id="@+id/view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_250"
+        android:background="@color/top_text_color_black">
+
+        <com.easefun.polyvsdk.video.PolyvVideoView
+            android:id="@+id/polyv_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.xuechuan.xcedu.player.player.PolyvPlayerLightView
+            android:id="@+id/polyv_player_light_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.xuechuan.xcedu.player.player.PolyvPlayerVolumeView
+            android:id="@+id/polyv_player_volume_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.xuechuan.xcedu.player.player.PolyvPlayerProgressView
+            android:id="@+id/polyv_player_progress_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <!-- 跑马灯 -->
+        <com.easefun.polyvsdk.marquee.PolyvMarqueeView
+            android:id="@+id/polyv_marquee_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000" />
+
+        <com.xuechuan.xcedu.player.player.PolyvPlayerMediaController
+            android:id="@+id/polyv_player_media_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!-- 视频在加载过程中显示的进度条 -->
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_play_my_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/banner">
+
+            <ImageView
+                android:id="@+id/iv_net_my_play"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_250"
+                android:scaleType="fitXY"
+                android:src="@mipmap/banner" />
+
+            <ImageView
+                android:id="@+id/iv_net_my_book_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/c_n_p_icon_play" />
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_net_book_back"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="@dimen/space_48"
+            android:layout_marginTop="@dimen/space_24"
+            android:scaleType="center"
+            android:src="@mipmap/nav_icon_back_bg" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/activity_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/text_size_16"
+            android:paddingRight="@dimen/text_size_16"
+            android:text="标题"
+            android:layout_weight="1"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_18" />
+
+        <ImageView
+            android:id="@+id/iv_net_icon_my_down"
+            android:layout_width="@dimen/space_48"
+            android:src="@mipmap/icon_download"
+            android:scaleType="center"
+            android:paddingRight="@dimen/space_16"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <View style="@style/view_line_10_gray" />
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/net_magic_my_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48" />
+
+    <com.xuechuan.xcedu.weight.NoScrollViewPager
+        android:id="@+id/vp_net_my_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

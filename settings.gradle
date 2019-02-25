@@ -1,0 +1,7 @@
+include ':app'
+include ':update-app'
+include ':ucrop'
+include ':lib-zxing'
+include ':MultilevelTreeLibrary'
+include ':picture_library'
+include ':librarySlider'

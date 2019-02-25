@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+    tools:context=".fragment.bank.SkillFragment">
+
+    <Space style="@style/space_20_height" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_70"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_22"
+        android:paddingRight="@dimen/space_22">
+
+        <LinearLayout
+            android:id="@+id/ll_b_skill_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/space_56"
+                android:layout_height="@dimen/space_56"
+                android:src="@mipmap/ic_wrong_topic" />
+
+            <Space style="@style/space_8_width" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mywrongquestion" />
+
+                <Space style="@style/space_4_height" />
+
+                <TextView
+                    android:id="@+id/tv_skill_wroing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_fu_color"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="0道" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_b_skill_collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/space_56"
+                android:layout_height="@dimen/space_56"
+                android:src="@mipmap/ic_collection_bank" />
+
+            <Space style="@style/space_8_width" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/space_6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank_my_collect" />
+
+                <Space style="@style/space_4_height" />
+
+                <TextView
+                    android:id="@+id/tv_skill_coolect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_fu_color"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="0道"  />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/view_line_10_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:paddingTop="@dimen/space_30">
+
+        <ImageView
+            android:id="@+id/iv_b_order"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_chapter_practice" />
+
+        <Space style="@style/space_8_width" />
+
+        <ImageView
+            android:id="@+id/iv_b_test"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_mocke_xam" />
+
+    </LinearLayout>
+<Space style="@style/space_20_height"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <TextView
+            android:id="@+id/tv_b_free"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_compo_site"
+            android:gravity="center_horizontal"
+            android:text="@string/skill_free_composition" />
+
+        <TextView
+            android:id="@+id/tv_b_special"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_special_zhuan"
+            android:gravity="center_horizontal"
+            android:text="@string/special_practice" />
+
+        <TextView
+            android:id="@+id/tv_b_turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_sequence_shun"
+            android:gravity="center_horizontal"
+            android:text="@string/sequential_exercise" />
+    </LinearLayout>
+
+</LinearLayout>

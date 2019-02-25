@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/tv_mulu" />
+            <corners android:bottomLeftRadius="@dimen/space_30" android:topLeftRadius="@dimen/space_30" />
+        </shape>
+    </item>
+</selector>

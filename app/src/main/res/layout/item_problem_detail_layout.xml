@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_8"
+        android:id="@+id/ll_teacher_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_teacher_head"
+            android:layout_width="@dimen/space_30"
+            android:layout_height="@dimen/space_30"
+            android:src="@mipmap/common_icon_defaultpicture_mini" />
+
+        <TextView
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_title_color"
+            android:textStyle="bold"
+            android:id="@+id/tv_teacher_nike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_8"
+            android:text="学川教育" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lift_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:padding="@dimen/space_8"
+        android:layout_marginRight="@dimen/space_60"
+        android:background="@drawable/problem_detail_tv_bg_n"
+        android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginBottom="@dimen/space_8"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/text_title_color"
+            android:id="@+id/tv_lift_main_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>
+        <com.xuechuan.xcedu.weight.MyAlbumWallGridView
+            android:verticalSpacing="@dimen/space_4"
+            android:horizontalSpacing="@dimen/space_4"
+            android:id="@+id/gv_lift_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="3" />
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_lift_main_buttom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/space_8">
+
+            <View
+                android:layout_marginTop="@dimen/space_8"
+                style="@style/view_line_1_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_problem_asked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/tv_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@mipmap/ask_ask"
+                        android:drawablePadding="@dimen/space_8"
+                        android:text="追问" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/space_4"
+                    android:layout_marginTop="@dimen/space_4"
+                    android:background="@color/gray_line" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_problem_resolved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:textSize="@dimen/text_size_14"
+                        android:textColor="@color/green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:drawableLeft="@mipmap/ask_slv"
+                        android:drawablePadding="@dimen/space_8"
+                        android:text="已解决" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:id="@+id/ll_right_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_60"
+        android:padding="@dimen/space_8"
+        android:background="@drawable/problem_detail_tv_bg_s"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_right_main_content"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/text_title_color"
+            android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <com.xuechuan.xcedu.weight.MyAlbumWallGridView
+            android:layout_marginTop="@dimen/space_8"
+            android:verticalSpacing="@dimen/space_4"
+            android:horizontalSpacing="@dimen/space_4"
+            android:id="@+id/gv_right_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="3" />
+    </LinearLayout>
+</LinearLayout>

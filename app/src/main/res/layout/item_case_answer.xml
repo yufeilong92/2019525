@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="222222"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_case_card_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:textColor="@color/text_title_color"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_14" />
+    <com.xuechuan.xcedu.weight.CaseGridView
+        android:scrollbars="none"
+        android:id="@+id/gv_pop_content"
+        android:fastScrollEnabled="false"
+        android:gravity="center"
+        android:numColumns="6"
+        android:columnWidth="48dp"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="8dp"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

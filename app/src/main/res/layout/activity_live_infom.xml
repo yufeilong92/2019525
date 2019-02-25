@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".live.LiveInfomActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="直播详情" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <ImageView
+        android:id="@+id/iv_live_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_live_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/web_live_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/space_48"
+            android:scrollbarStyle="outsideInset" />
+
+        <LinearLayout
+            android:id="@+id/ll_live_buttom_float"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_8"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/y"
+                android:textColor="@color/red_text"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_live_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1500"
+                android:textColor="@color/red_text"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_live_service"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/space_30"
+                android:drawableLeft="@mipmap/c_n_p_icon_service"
+                android:drawablePadding="@dimen/space_8"
+                android:gravity="center_vertical"
+                android:text="@string/custom_service" />
+
+            <Button
+                android:id="@+id/btn_live_buy"
+                android:layout_width="110dp"
+                android:layout_height="32dp"
+                android:background="@drawable/btn_login_bg_normal"
+                android:paddingLeft="@dimen/space_8"
+                android:text="@string/do_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18" />
+        </LinearLayout>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_live_value"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/ic_m_identify_"
+            android:text="已购买课程,敬请期待"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

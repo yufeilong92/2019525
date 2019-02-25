@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.wenda.CreateProblemActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarMarqueeText"
+            android:text="问题描述" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/space_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_input_problem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_150"
+                android:background="@color/transparent"
+                android:gravity="top|left"
+                android:hint="@string/input_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_margin="@dimen/space_8"
+                        android:id="@+id/iv_imgone"
+                        android:layout_width="match_parent"
+                        android:layout_height="108dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ask_addimg" />
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_imgone_delete"
+                        android:src="@mipmap/ask_delimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="@dimen/space_8"
+                        android:id="@+id/iv_imgtwo"
+                        android:layout_height="108dp"
+                        android:layout_width="match_parent"
+                        android:paddingLeft="@dimen/space_8"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ask_addimg"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/iv_imgtwo_delete"
+                        android:src="@mipmap/ask_delimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_margin="@dimen/space_8"
+                        android:id="@+id/iv_imgthree"
+                        android:layout_height="108dp"
+                        android:layout_width="match_parent"
+                        android:paddingLeft="@dimen/space_8"
+                        android:paddingRight="@dimen/space_8"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ask_addimg"
+                        android:visibility="invisible" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/iv_imgthree_delete"
+                        android:src="@mipmap/ask_delimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:text="问题标签"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/space_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.xuechuan.xcedu.weight.FlowLayout
+            android:id="@+id/fl_problem_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_create_problem_submit"
+            android:textSize="@dimen/text_size_18"
+            android:textColor="@color/white"
+            android:text="@string/submit_question"
+            android:background="@drawable/gm_btn_bg"
+            android:layout_marginTop="@dimen/space_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+</LinearLayout>

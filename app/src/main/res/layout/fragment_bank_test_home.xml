@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_60"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/space_10"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:paddingTop="@dimen/space_24">
+
+        <TextView
+            android:id="@+id/tv_banktest_skill"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:text="技术实务"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_24"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_banktext_colligate_"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingLeft="@dimen/space_16"
+            android:text="综合能力"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_banktest_case_new"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:paddingLeft="@dimen/space_16"
+            android:text="案例分析"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+    <View
+       style="@style/title_line_style"/>
+
+    <FrameLayout
+        android:id="@+id/fl_banktest_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

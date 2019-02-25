@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_100"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/space_16"
+        android:paddingTop="@dimen/space_16">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_16"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_home_titel_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/space_4"
+                android:maxLines="2"
+                android:text="测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题测试标题"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/space_16" />
+
+            <Space style="@style/space_8_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_item_home_time_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-02-02"
+                    android:textColor="@color/text_fu_color"
+                    android:textSize="@dimen/text_size_12" />
+
+                <Space style="@style/space_12_width" />
+
+                <TextView
+                    android:id="@+id/tv_item_home_address_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国消防资源"
+                    android:textColor="@color/text_fu_color"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_item_home_content"
+            android:layout_width="@dimen/space_100dp"
+            android:layout_height="@dimen/space_70"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher_round" />
+    </LinearLayout>
+
+    <View style="@style/view_line1_gray_line" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_year_net"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/spance_50"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16"
+        android:text="@string/more"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_14" />
+
+    <View style="@style/view_line_1_gray" />
+</LinearLayout>

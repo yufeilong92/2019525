@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.me.AddAddressActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="@string/edit_address" />
+
+        <TextView
+            android:id="@+id/tv_address_add"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_action_height"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/spance_12"
+            android:text="@string/save"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_title_"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/addressee" />
+
+            <EditText
+                android:id="@+id/et_address_name"
+                style="@style/et_style"
+                android:layout_marginLeft="44dp"
+                android:hint="@string/addres_name"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_title_"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/phone2" />
+
+            <EditText
+                android:id="@+id/et_address_phone"
+                style="@style/et_style"
+                android:layout_marginLeft="@dimen/space_30"
+                android:hint="@string/phone1"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_title_"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/province" />
+
+            <TextView
+                android:id="@+id/tv_address_address"
+                style="@style/et_style"
+                android:layout_marginLeft="45dp"
+                android:hint="@string/please_province" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_16"
+            android:paddingTop="@dimen/space_16">
+
+            <TextView
+                style="@style/text_title_"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:text="@string/street_address" />
+
+            <com.xuechuan.xcedu.weight.ContentEditText
+                android:id="@+id/et_infom_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_100"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:background="@color/transparent"
+                android:gravity="top"
+                android:hint="@string/edit_detail_address"
+                android:imeOptions="actionDone"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:minLines="2"
+                android:paddingLeft="@dimen/space_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_title_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/postalcode" />
+
+            <EditText
+                android:hint="请输入邮编"
+                android:textSize="@dimen/text_size_14"
+                android:paddingLeft="@dimen/space_8"
+                android:id="@+id/et_address_postalcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_30"
+                android:background="@color/transparent"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/view_line_10_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_chb_layou"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <TextView
+            style="@style/text_title_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="设置默认地址" />
+
+        <CheckBox
+            android:id="@+id/chb_select_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/select_pop_swt_bg"
+            android:checked="true" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/input_bg" />
+</LinearLayout>

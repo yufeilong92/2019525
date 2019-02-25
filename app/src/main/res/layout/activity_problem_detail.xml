@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/problem_detail_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_line"
+    android:orientation="vertical"
+    tools:context=".ui.wenda.ProblemDetailActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView style="@style/TitleBarMarqueeText" />
+
+        <ImageView
+            android:id="@+id/iv_title_more"
+            style="@style/TitleBarAction"
+            android:padding="14dp"
+            android:visibility="invisible"
+            android:src="@mipmap/nav_icon_share" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_problem_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/space_16" />
+</LinearLayout>

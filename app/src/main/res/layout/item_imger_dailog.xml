@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detail_dialog_ll_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/space_16">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ask_fin" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="问题已解决"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/space_20"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/space_16"
+                android:background="@color/text_fu_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="答疑评价"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <View
+                android:layout_width="@dimen/space_20"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_16"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chb_evaluer_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/select_problem_star" />
+
+            <CheckBox
+                android:id="@+id/chb_evaluer_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/select_problem_star" />
+
+            <CheckBox
+                android:id="@+id/chb_evaluer_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/select_problem_star" />
+
+            <CheckBox
+                android:id="@+id/chb_evaluer_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/select_problem_star" />
+
+            <CheckBox
+                android:id="@+id/chb_evaluer_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/select_problem_star" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/et_evaluer_input"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/et_m_input_bg"
+            android:gravity="top|left"
+            android:hint="想说的建议..."
+            android:padding="@dimen/space_8"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <Button
+            android:id="@+id/btn_evaluer_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/space_8"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/btn_errortext_go_bg"
+            android:text="@string/evaluate"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+</RelativeLayout>

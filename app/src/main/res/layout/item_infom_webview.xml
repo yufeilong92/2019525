@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/web_infom_detail"
+        android:layout_width="match_parent"
+        android:minHeight="200dp"
+        android:paddingLeft="@dimen/space_8"
+        android:paddingRight="@dimen/space_8"
+        android:layout_height="wrap_content">
+    </WebView>
+<LinearLayout
+    android:id="@+id/ll_webview_after"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/li_supperNumber"
+        android:layout_width="@dimen/space_100dp"
+        android:layout_height="@dimen/space_100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/ic_home_supper"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/space_16">
+        <CheckBox
+            android:padding="@dimen/space_8"
+            android:id="@+id/chb_iofom_detial_supper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/select_issupper_bg"
+            android:button="@null"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/text_title_color"
+            android:text="11111"
+            android:gravity="center" />
+        <Space
+            android:visibility="gone"
+            style="@style/space_8_height" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_iofom_detail_suppernumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="123"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <Space style="@style/space_16_height" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_10"
+        android:background="@color/input_bg" />
+    <TextView
+        android:padding="@dimen/space_16"
+        android:visibility="gone"
+        android:id="@+id/tv_h_evalue"
+        android:text="评论()"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</LinearLayout>

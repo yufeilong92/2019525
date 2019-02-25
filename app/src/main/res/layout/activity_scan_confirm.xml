@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ScanConfirmActivity">
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView style="@style/TitleBarAction" />
+
+        <TextView
+            style="@style/TitleBarText"
+            />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="@dimen/space_60"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_scanfim"
+        android:layout_width="190dp"
+        android:layout_height="130dp" />
+    <TextView
+        android:layout_marginTop="@dimen/space_30"
+        android:textSize="@dimen/text_size_16"
+        android:textColor="@color/text_title_color"
+        android:layout_gravity="center"
+        android:text="@string/com_login_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:paddingRight="@dimen/space_48"
+        android:paddingLeft="@dimen/space_48"
+        android:layout_marginTop="@dimen/space_75"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_qr_login_sure"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/red_text"
+            android:background="@drawable/bg_select_answer_evalue"
+            android:text="@string/sure_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_16" />
+        <Button
+            android:id="@+id/btn_qr_login_cancel"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_14"
+            android:background="@color/transparent"
+            android:text="@string/cancle_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48" />
+    </LinearLayout>
+</LinearLayout>

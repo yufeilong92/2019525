@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/space_16"
+    android:gravity="center"
+
+    >
+
+
+    <TextView
+
+        android:id="@+id/tv_popu_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textSize="@dimen/text_size_16"
+        android:textColor="@color/black"
+        android:drawableLeft="@mipmap/ic_b_setting"
+        android:drawablePadding="@dimen/space_10"
+        android:gravity="center_vertical"
+        android:text="@string/setting" />
+
+    <View style="@style/view_line" />
+
+    <TextView
+
+        android:textSize="@dimen/text_size_16"
+        android:textColor="@color/black"
+        android:id="@+id/tv_popi_share"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/space_48"
+        android:drawableLeft="@mipmap/ic_b_share"
+        android:drawablePadding="@dimen/space_10"
+        android:gravity="center_vertical"
+        android:text="@string/share" />
+</LinearLayout>

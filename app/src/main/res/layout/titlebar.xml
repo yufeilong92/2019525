@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_text_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_56"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_text_bar_back"
+            android:layout_width="@dimen/bottom_layout_height"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@mipmap/nav_icon_back_gray" />
+
+        <LinearLayout
+            android:id="@+id/tv_text_bar_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_action_height"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_text_bar_time_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/qbank_answer_icon_cont"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/activity_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/title_action_height"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="@dimen/space_8"
+                android:paddingRight="@dimen/space_8"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_text_bar_delect"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/space_8"
+            android:src="@mipmap/q_nav_delect_gray"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_text_bar_more"
+            android:layout_width="@dimen/bottom_layout_height"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:src="@mipmap/nav_icon_more_gray" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_gm_read_line"
+        style="@style/view_line_tab_line" />
+</merge>

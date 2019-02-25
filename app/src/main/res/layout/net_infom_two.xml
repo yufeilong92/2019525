@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_net_infom_two_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:layout_marginTop="@dimen/spance_120"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingRight="@dimen/space_16">
+
+        <TextView
+            android:id="@+id/tv_net_infom_two_catalogue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <Button
+            android:id="@+id/btn_home_net_infom_two_catalogue_switch"
+            android:layout_width="@dimen/space_56"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_8"
+            android:background="@color/transparent"
+            android:drawableLeft="@mipmap/common_icon_change_r"
+            android:text="@string/net_switch"
+            android:textColor="@color/red_text"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_net_infom_two_catalogue_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/space_8"
+        android:paddingRight="@dimen/space_8" />
+
+    <include layout="@layout/empty" />
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <Space
+        android:id="@+id/se_line_one"
+        android:layout_width="@dimen/space_16"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:background="@drawable/daijie_item_ll_bg"
+        android:padding="@dimen/space_8"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <View
+        android:id="@+id/viewwendao_itemone_circle"
+        android:layout_width="@dimen/space_4"
+        android:layout_height="@dimen/space_4"
+        android:background="@drawable/everyday_main_btn_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_8">
+
+        <TextView
+            android:id="@+id/tv_wendao_itemone_title"
+            android:textSize="@dimen/text_size_16"
+            android:lines="2"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textColor="@color/text_title_color"
+            android:layout_width="match_parent"
+            android:maxWidth="245dp"
+            android:layout_height="wrap_content"
+            android:text="防火防火防火" />
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_wendao_itemone_status"
+            android:textColor="@color/green"
+            android:layout_marginTop="@dimen/space_8"
+            android:background="@drawable/daijie_item_tv_bg"
+            android:text="已回答"
+            android:padding="@dimen/space_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+    <Space
+        android:id="@+id/se_line_two"
+        android:layout_width="@dimen/space_16"
+        android:layout_height="match_parent" />
+</LinearLayout>

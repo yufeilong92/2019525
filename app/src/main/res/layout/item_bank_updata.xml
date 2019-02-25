@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_view_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/space_16">
+
+        <TextView
+            android:id="@+id/tv_bank_updata_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="题库更新"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_bank_updata_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:text="内容更专业"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_12" />
+
+        <LinearLayout
+            android:id="@+id/ll_bank_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_bank_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_30"
+                android:background="@drawable/btn_dialog_canle_bg"
+                android:text="忽略" />
+
+            <Space style="@style/space_16_width" />
+
+            <Button
+                android:id="@+id/btn_bank_updata"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_30"
+                android:background="@drawable/btn_b_sure_s"
+                android:text="更新"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_bank_updata"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_4"
+            android:layout_marginTop="@dimen/space_8"
+            android:max="100"
+            android:progressDrawable="@drawable/progressbar_horizontal_bg" />
+
+        <ProgressBar
+            android:id="@+id/pb_bank_jieya"
+            android:indeterminateTint="@color/red_text"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="@dimen/space_48"
+            android:visibility="gone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:drawableLeft="@mipmap/common_pop_tishi"
+            android:gravity="center_vertical"
+            android:text="收藏、错题随版本更新可能部分删除"
+            android:textColor="@color/text_fu_color"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

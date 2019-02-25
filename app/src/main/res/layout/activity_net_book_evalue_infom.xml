@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.net.NetBookEvalueInfomActivity">
+
+    <LinearLayout style="@style/TitleBar">
+
+        <ImageView
+            style="@style/TitleBarAction"
+            android:onClick="onHomeClick"
+            android:src="@mipmap/ic_back"
+            tools:ignore="OnClick" />
+
+        <TextView
+            style="@style/TitleBarText"
+            android:text="" />
+
+        <ImageView style="@style/TitleBarAction" />
+
+    </LinearLayout>
+
+    <View style="@style/view_line_tab_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_16">
+
+        <ImageView
+            android:id="@+id/iv_evaluate_hear"
+            android:layout_width="@dimen/space_48"
+            android:layout_height="@dimen/space_48"
+            android:src="@mipmap/common_icon_defaultpicture" />
+
+        <Space style="@style/space_20_width" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_evalue_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户名字"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_14" />
+
+            <Space style="@style/space_16_height" />
+
+            <TextView
+                android:id="@+id/tv_evalue_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="评价内容评价内容评价内容评价内容评价内容评价内容评价内容评价内容评价内容" />
+
+            <Space style="@style/space_16_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_evalue_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1分钟" />
+
+                <TextView
+                    android:id="@+id/tv_evalue_evalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_comment"
+                    android:drawablePadding="@dimen/space_8"
+                    android:text="评论" />
+
+                <Space style="@style/space_16_width" />
+
+                <CheckBox
+                    android:id="@+id/chb_evalua_issupper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_issupper_home"
+                    android:button="@null" />
+
+                <Space style="@style/space_8_width" />
+
+                <TextView
+                    android:id="@+id/tv_evalue_suppernumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="99" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/view_line_10_gray" />
+
+    <RelativeLayout
+        android:id="@+id/rl_infom_two_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.andview.refreshview.XRefreshView
+            android:id="@+id/xfv_content_two_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/space_56">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rlv_infomtwo_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.andview.refreshview.XRefreshView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/space_8">
+
+            <EditText
+                android:id="@+id/et_infom_two_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/space_8"
+                android:layout_weight="1"
+                android:background="@drawable/btn_home_search_bg"
+                android:gravity="center_vertical"
+                android:hint="我来说两句..."
+                android:maxLines="4"
+                android:minLines="2"
+                android:paddingBottom="@dimen/space_4"
+                android:paddingLeft="@dimen/space_16"
+                android:paddingRight="@dimen/space_16"
+                android:paddingTop="@dimen/space_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:id="@+id/btn_infom_two_send"
+                android:layout_width="@dimen/space_22"
+                android:layout_height="@dimen/space_22"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/ic_send" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_evalue_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_evalue"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

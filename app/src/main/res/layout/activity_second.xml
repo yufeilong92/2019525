@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.SecondActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_56"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/TitleBar"
+            android:background="@color/transparent">
+
+            <ImageView
+                style="@style/TitleBarAction"
+                android:background="@color/transparent"
+                android:onClick="onHomeClick"
+                android:src="@mipmap/ic_back" />
+
+            <TextView
+                style="@style/TitleBarText"
+                android:background="@color/transparent"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/iv_title_photo"
+                style="@style/TitleBarAction"
+                android:background="@color/transparent"
+                android:padding="14dp"
+                android:src="@mipmap/m_modify_photoal" />
+        </LinearLayout>
+
+        <View style="@style/view_line_tab_line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_my_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="130dp"
+            android:text="将二维码/条码放入框内,即可自动扫描"
+            android:textColor="@color/text_fu_color"
+            android:textSize="@dimen/text_size_11" />
+
+        <CheckBox
+            android:id="@+id/chb_flight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/space_56"
+            android:button="@drawable/select_flight_bg"
+            android:src="@mipmap/flight_n" />
+    </RelativeLayout>
+</LinearLayout>

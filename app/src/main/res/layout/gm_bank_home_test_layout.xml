@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/space_16"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_banknew_do_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/do_number"
+                    android:textColor="@color/text_fu_color"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_banknew_all_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_number"
+                    android:textColor="@color/text_fu_color"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_right_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_banknew_right_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/text_title_color"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/right_number"
+                    android:textColor="@color/text_fu_color"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_100"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@color/bank_new_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16"
+            android:paddingTop="@dimen/space_4">
+
+            <LinearLayout
+                android:id="@+id/ll_banknew_practice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/spance_50"
+                    android:layout_height="@dimen/spance_50"
+                    android:src="@mipmap/qb_zhangjie" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="章节练习"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:text="知识点通关"
+                        android:textColor="@color/text_fu_color"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/space_10"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_banknew_exam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/spance_50"
+                    android:layout_height="@dimen/spance_50"
+                    android:src="@mipmap/qb_moni" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="模拟考试"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_10"
+                        android:text="全真试题演练"
+                        android:textColor="@color/text_fu_color"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spance_120"
+            android:background="@color/bank_new_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_10"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16">
+
+            <LinearLayout
+                android:id="@+id/ll_banknew_free"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/speca_105dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/space_40"
+                    android:layout_height="@dimen/space_40"
+                    android:src="@mipmap/qb_ziyou" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:text="@string/skill_free_composition" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/space_10"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_banknew_special"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/speca_105dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/space_40"
+                    android:layout_height="@dimen/space_40"
+                    android:src="@mipmap/qb_zhuanxiang" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:text="@string/special_practice" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/space_10"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_banknew_order"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/speca_105dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/space_40"
+                    android:layout_height="@dimen/space_40"
+                    android:src="@mipmap/qb_shunxv" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:text="@string/sequential_exercise" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/li_gm_day_execrise"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_70"
+            android:layout_marginLeft="@dimen/space_16"
+            android:layout_marginRight="@dimen/space_16"
+            android:background="@mipmap/qb_mei"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10"
+                android:background="@drawable/btn_b_sure_s"
+                android:paddingBottom="@dimen/space_2"
+                android:paddingLeft="@dimen/space_10"
+                android:paddingRight="@dimen/space_10"
+                android:paddingTop="@dimen/space_2"
+                android:text="每日一练"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_day_execist_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:paddingLeft="@dimen/space_10"
+                android:text="暂无内容"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_banknew_error"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:paddingBottom="@dimen/space_8"
+            android:paddingTop="@dimen/space_16"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/qb_ctj"
+                android:drawablePadding="@dimen/space_4"
+                android:text="@string/error_list" />
+
+            <TextView
+                android:id="@+id/tv_banknew_error_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/space_2"
+                android:text="0"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/space_8"
+                android:drawableRight="@mipmap/ic_more_go"
+                android:text="@string/dao"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_banknew_favaoite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_48"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/space_8"
+            android:paddingTop="@dimen/space_8"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/qb_shcj"
+                android:drawablePadding="@dimen/space_4"
+                android:text="@string/favorite_list" />
+
+            <TextView
+                android:id="@+id/tv_banknew_favorite_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/space_2"
+                android:text="0"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/space_8"
+                android:drawableRight="@mipmap/ic_more_go"
+                android:text="@string/dao"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_banknew_note"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingTop="@dimen/space_8"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/space_8"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_16">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/qb_bj"
+                android:drawablePadding="@dimen/space_4"
+                android:text="@string/note_list" />
+
+            <TextView
+                android:id="@+id/tv_banknew_note_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/space_2"
+                android:text="0"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/space_8"
+                android:drawableRight="@mipmap/ic_more_go"
+                android:text="@string/dao"
+                android:textColor="@color/text_fu_color"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <View style="@style/view_line_1_gray" />
+    </LinearLayout>
+
+</ScrollView>

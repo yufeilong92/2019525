@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_8"
+        android:id="@+id/ll_zengping_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/bg_net_pop_infom_iv" />
+
+        <TextView
+            android:id="@+id/tv_net_pop_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_10"
+            android:gravity="center_vertical"
+            android:text="分析"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+    <RadioButton
+        android:layout_marginTop="@dimen/space_8"
+        android:id="@+id/rab_mulu_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:gravity="center"
+        android:text="222"
+        android:checked="true"
+        android:button="@null"
+        android:background="@drawable/select_mulu_net_bg"
+        android:textColor="@color/red_text"
+        android:textSize="@dimen/text_size_14" />
+</LinearLayout>

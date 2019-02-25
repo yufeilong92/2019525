@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_48"
+        android:layout_marginTop="@dimen/space_24"
+        android:gravity="center"
+        android:text="问答"
+        android:textColor="@color/text_title_color"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold" />
+
+    <View style="@style/view_line_tab_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_answer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.xuechuan.xcedu.weight.XRefreshViewLayout
+            android:id="@+id/xrfv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rlv_net_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/iv_net_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:visibility="gone"
+                android:src="@mipmap/common_blankimg_ser" />
+        </com.xuechuan.xcedu.weight.XRefreshViewLayout>
+        <Button
+            android:id="@+id/btn_wenda_submitProblem"
+            android:layout_width="@dimen/space_64"
+            android:layout_height="@dimen/space_64"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/space_16"
+            android:background="@mipmap/ask_icon_fab" />
+    </RelativeLayout>
+
+
+</LinearLayout>

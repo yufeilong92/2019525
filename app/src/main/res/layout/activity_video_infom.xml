@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.net.VideoInfomActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/root_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/net_infom_one" />
+
+            <include layout="@layout/net_infom_two" />
+
+            <include layout="@layout/net_infom_three" />
+
+            <View
+                style="@style/view_line1_gray_line"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/space_48" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/space_48"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_48"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/text_size_16"
+                    android:paddingRight="@dimen/text_size_16">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/spance_25"
+                        android:gravity="center_vertical"
+                        android:text="@string/y"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/text_size_18"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_net_infom_book_allprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/spance_25"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="2071"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <TextView
+                        android:id="@+id/tv_net_infom_contact_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@mipmap/c_n_p_icon_service"
+                        android:drawablePadding="@dimen/space_8"
+                        android:gravity="center_vertical"
+                        android:text="@string/custom_service"
+                        android:textColor="@color/text_fu_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/space_16"
+                        android:layout_marginLeft="@dimen/space_8"
+                        android:layout_marginRight="@dimen/space_8"
+                        android:layout_marginTop="@dimen/space_16"
+                        android:background="@color/login_line_color" />
+
+                    <Button
+                        android:id="@+id/btn_net_infom_go_buy"
+                        android:layout_width="110dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/btn_login_bg_normal"
+                        android:paddingLeft="@dimen/space_8"
+                        android:text="@string/do_pay"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include
+            android:visibility="gone"
+            layout="@layout/empty" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/li_title_tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spance_120"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:alpha="0"
+        android:paddingTop="@dimen/space_24">
+
+        <LinearLayout
+            style="@style/TitleBar"
+            android:layout_height="@dimen/space_48">
+
+            <ImageView
+                style="@style/TitleBarAction"
+                android:onClick="onHomeClick"
+                android:src="@mipmap/ic_back"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/tv_tab_allnet_infom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/text_size_18" />
+
+            <ImageView style="@style/TitleBarAction" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_16"
+            android:layout_marginRight="@dimen/space_16"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/space_8">
+
+            <RadioButton
+                android:id="@+id/rdb_net_infom_one"
+                style="@style/net_infom_radiobutton"
+                android:checked="true"
+                android:text="@string/infom" />
+
+            <RadioButton
+                android:id="@+id/rdb_net_mulu_two"
+                style="@style/net_infom_radiobutton"
+                android:text="@string/catalogue" />
+
+            <RadioButton
+                android:id="@+id/rdb_net_evaluate_three"
+                style="@style/net_infom_radiobutton"
+                android:text="@string/evaluate" />
+        </LinearLayout>
+        <View
+           style="@style/title_line_style"/>
+    </LinearLayout>
+</RelativeLayout>

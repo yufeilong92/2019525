@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gm_tworool_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    <com.xuechuan.xcedu.weight.WeiNestedScrollView
+                android:id="@+id/smsv_two_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbarTrackVertical="@color/transparent"
+                android:scrollbars="none">-->
+        <com.xuechuan.xcedu.weight.SmartScrollView
+            android:id="@+id/smsv_two_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbarTrackVertical="@color/transparent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--阅读布局-->
+                <include layout="@layout/gm_home_read_text_layout" />
+                <!--题干布局-->
+                <include layout="@layout/gm_zone_question_title_layout" />
+                <!--正常选项-->
+                <include layout="@layout/gm_one_read_text_layout" />
+                <!--购买布局-->
+                <include layout="@layout/answer_layout_buy" />
+                <!--解析布局-->
+                <include layout="@layout/gm_two_analysis_layout" />
+                <!--笔记布局-->
+                <include layout="@layout/gm_three_note_layout" />
+                <!--评价布局-->
+                <include layout="@layout/gm_four_evaluate_layout" />
+                <!--阅读理解布局-->
+                <include layout="@layout/gm_seven_answer_layout" />
+                <!--简答布局-->
+                <include layout="@layout/gm_eight_jianda_layout" />
+                <!--简答布局输入框-->
+                <include layout="@layout/gm_eight_one_jianda_layout" />
+            </LinearLayout>
+
+            <!--</com.xuechuan.xcedu.weight.WeiNestedScrollView>-->
+
+        </com.xuechuan.xcedu.weight.SmartScrollView>
+
+        <Button
+            android:id="@+id/btn_gmseven_answer"
+            android:layout_width="@dimen/space_64"
+            android:layout_height="@dimen/space_64"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/text_size_16"
+            android:background="@drawable/gmtext_jianda_btn_bg"
+            android:text="答题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <include layout="@layout/empty" />
+
+    <include layout="@layout/gm_bar" />
+</LinearLayout>

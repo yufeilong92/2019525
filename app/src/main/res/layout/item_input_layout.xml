@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.xuechuan.xcedu.weight.ContentEditText
+                android:id="@+id/et_submit_evalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space_16"
+                android:layout_marginRight="@dimen/space_16"
+                android:layout_marginTop="@dimen/space_16"
+                android:background="@color/input_bg"
+                android:gravity="top"
+                android:minLines="5"
+                android:maxLines="9"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                android:hint="@string/et_hint"
+                android:imeOptions="actionSend"
+                android:padding="@dimen/space_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <Button
+                android:layout_marginBottom="@dimen/space_8"
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/space_32"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/space_16"
+                android:background="@color/transparent"
+                android:text="@string/submit"
+                android:textColor="@color/red_text"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
