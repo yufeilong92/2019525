@@ -283,14 +283,14 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
 
     }
 
- /*   @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_gm_read_one, container, false);
-        initView(view);
-        return view;
-    }
-*/
+    /*   @Override
+       public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                Bundle savedInstanceState) {
+           view = inflater.inflate(R.layout.fragment_gm_read_one, container, false);
+           initView(view);
+           return view;
+       }
+   */
     @Override
     protected int initInflateView() {
         return R.layout.fragment_gm_read_one;
@@ -669,9 +669,11 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
             mMockExamActivity = (MockExamActivity) getActivity();
             vo = mMockExamActivity.queryUserData(mQuestionSqliteVo.getQuestion_id());
         }
+        if (mMockExamActivity.getSubmitAble()){
+            initTitleRed();
+        }
         if (doUserLookJiXi()) return;
         //回现数据
-
         if (vo == null) return;
         if (vo.getIsDo() == 0) return;
         if (vo.getQuestiontype() == 2) {//单选
@@ -717,16 +719,16 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
             }
             doRadioEventView();
         }
-        initTitleRed();
+//        initTitleRed();
     }
 
     private void initTitleRed() {
         if (StringUtil.isEmpty(mQuestionSqliteVo.getKeywordsString())) {
             return;
         }
-        final int width = mIvGmZoneQuestintype.getLayoutParams().width+20;
+        final int width = mIvGmZoneQuestintype.getLayoutParams().width + 20;
         Spanned spanned = StringUtil.repaceExamStr(mQuestionSqliteVo.getQuestionString(),
-                mQuestionSqliteVo.getKeywordsString(), null,width);
+                mQuestionSqliteVo.getKeywordsString(), null, width);
         mTvGmZoneQuestionTitle.setText(spanned);
     }
 
@@ -875,9 +877,11 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
         mLlGmZoneQuestionTitle.setBackgroundColor(mGmReadColorManger.getmLayoutBgColor());
         mTvGmThreeNoteContent.setTextColor(mGmReadColorManger.getmTextTitleColor());
     }
+
     String ab = "\t";
     String d = "\t";
     int cound = 0;
+
     private void readDataBindView() {
 //        String question = mQuestionSqliteVo.getQuestionStr();
         String question = mQuestionSqliteVo.getQuestionString();
@@ -886,7 +890,7 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
         mIvGmZoneQuestintype.setImageDrawable(getQuestionType());
 //        String empty = "               ";
 //        String concat = DataMessageVo.empty.concat(question);
-        final int width = mIvGmZoneQuestintype.getLayoutParams().width+20;
+        final int width = mIvGmZoneQuestintype.getLayoutParams().width + 20;
         cound = 20;
         String getwith = getwith(20, width);
         String concat = getwith.concat(question);
@@ -916,21 +920,23 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
         bindKaoDian();
 
     }
+
     private String getwith(int wd, int width) {
-        if (wd==0||width==0)return ab;
+        if (wd == 0 || width == 0) return ab;
         if (cound < width) {
             ab = ab.concat(d);
             cound += wd;
             getwith(wd, width);
         }
-        return ab+":";
+        return ab + ":";
     }
+
     /**
      * 绑定考点
      */
     private void bindKaoDian() {
         mFlowlayoutGmTwo.removeAllViews();
-        String keywordStr = mQuestionSqliteVo.getKeywordStr();
+        String keywordStr = mQuestionSqliteVo.getKeywordsString();
         if (StringUtil.isEmpty(keywordStr)) return;
         ArrayList<String> list = mGmTextUtil.getKeyWords(keywordStr);
         if (list != null && !list.isEmpty()) {
@@ -939,6 +945,9 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
                 View itemvo = LayoutInflater.from(mContext).inflate(R.layout.item_gmtext_key_layout, mFlowlayoutGmTwo, false);
                 TextView tv = (TextView) itemvo.findViewById(R.id.tv_gm_keywords_content);
                 tv.setText(key);
+                if (mGmReadColorManger != null) {
+                    tv.setTextColor(mGmReadColorManger.getmTextFuColor());
+                }
                 mFlowlayoutGmTwo.addView(itemvo);
             }
         }
@@ -1372,7 +1381,7 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
                 }
                 break;
             case 5:
-                if (mPopShare!=null){
+                if (mPopShare != null) {
                     mPopShare.getPopupWindow().dismiss();
                 }
                 break;
@@ -2092,7 +2101,7 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
                             ShareUtils.shareImg(mMockExamActivity, mQuestionSqliteVo.getQuestionString(),
                                     pic, SHARE_MEDIA.QQ);
                         }
-                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0,5,false));
+                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
                     }
                 });
                 qqzon.setOnClickListener(new View.OnClickListener() {
@@ -2109,7 +2118,7 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
                             ShareUtils.shareImg(mMockExamActivity, mQuestionSqliteVo.getQuestionString(),
                                     pic, SHARE_MEDIA.QQ);
                         }
-                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0,5,false));
+                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
                     }
                 });
                 weibo.setOnClickListener(new View.OnClickListener() {
@@ -2143,7 +2152,7 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
                             ShareUtils.shareImg(mMockExamActivity, mQuestionSqliteVo.getQuestionString(),
                                     pic, SHARE_MEDIA.WEIXIN);
                         }
-                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0,5,false));
+                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
                     }
                 });
                 circle.setOnClickListener(new View.OnClickListener() {
@@ -2160,7 +2169,7 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
                             ShareUtils.shareImg(mMockExamActivity, mQuestionSqliteVo.getQuestionString(),
                                     pic, SHARE_MEDIA.WEIXIN_CIRCLE);
                         }
-                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0,5,false));
+                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
                     }
                 });
             }
@@ -2173,7 +2182,7 @@ public class GmReadOneFragment extends BaseFragment implements TestObserver, Vie
                     @Override
                     public void onDismiss() {
                         Utils.setBackgroundAlpha(1f, mContext);
-                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0,5,false));
+                        EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
                     }
                 });
             }

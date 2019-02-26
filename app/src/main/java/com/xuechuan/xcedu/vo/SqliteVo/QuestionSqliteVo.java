@@ -17,7 +17,7 @@ public class QuestionSqliteVo implements Serializable {
     private int id;
     private int question_id;
     private byte[] question;
-    //解密后得数据
+    //解密后得数据(每日一练试用)
     private String questionStr;
     private String questionimg;
     private int isreadcom;
@@ -33,11 +33,11 @@ public class QuestionSqliteVo implements Serializable {
     private String option_h;
     private String choice_answer;
     private byte[] explained;
-    //解密后得数据
+    //解密后得数据(每日一练试用)
     private String explainedStr;
 
     private String explainimg;
-    //解密后得数据
+    //解密后得数据(每日一练试用)
     private String explainimgStr;
 
     private int chapter_id;
@@ -45,7 +45,7 @@ public class QuestionSqliteVo implements Serializable {
     private int sort;
     //关键字
     private byte[] keywords;
-    //解密后得数据
+    //解密后得数据(每日一练试用)
     private String keywordStr;
     private int difficulty;
     private double right_rate;
@@ -57,10 +57,11 @@ public class QuestionSqliteVo implements Serializable {
     private double ext_double2;
     private int ext_int1;
     private int ext_int2;
+    //后续增加本地使用<
     private String questionString;
     private String keywordsString;
     private String explainString;
-
+    //>
     public String getQuestionString() {
         return questionString;
     }

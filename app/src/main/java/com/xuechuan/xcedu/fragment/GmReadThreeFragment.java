@@ -394,7 +394,7 @@ public class GmReadThreeFragment extends BaseFragment implements TestObserver, G
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 double a = seekBar.getProgress();
-                double v =a * 0.5;
+                double v = a * 0.5;
                 mTvGmEightOneNumberTitle.setText(String.valueOf(v));
             }
 
@@ -807,8 +807,12 @@ public class GmReadThreeFragment extends BaseFragment implements TestObserver, G
      */
     private void initDoEvent() {
         DoBankSqliteVo vo = null;
-        if (mCaseExamtActivity != null) {
+        if (getActivity() instanceof CaseExamtActivity) {
+            mCaseExamtActivity = (CaseExamtActivity) getActivity();
             vo = mCaseExamtActivity.queryUserData(mQuestionSqliteVo.getQuestion_id());
+            if (mCaseExamtActivity.submitAble()) {
+                initTitleRed();
+            }
         }
         //回现数据
         if (doUserLookJiXi()) return;
@@ -881,23 +885,26 @@ public class GmReadThreeFragment extends BaseFragment implements TestObserver, G
                 }
             }
         }
-        initTitleRed();
+//        initTitleRed();
     }
 
     private void initTitleRed() {
         if (StringUtil.isEmpty(mQuestionSqliteVo.getKeywordsString())) {
             return;
         }
-        final int width = mIvGmZoneQuestintype.getLayoutParams().width+20;
+        final int width = mIvGmZoneQuestintype.getLayoutParams().width + 20;
         Spanned spanned = StringUtil.repaceExamStr(mQuestionSqliteVo.getQuestionString(),
-                mQuestionSqliteVo.getKeywordsString(), null,width);
+                mQuestionSqliteVo.getKeywordsString(), null, width);
         mTvGmZoneQuestionTitle.setText(spanned);
     }
 
     //用户查看解析
     private boolean doUserLookJiXi() {
         //处理用户查看解析
-        if (mCaseExamtActivity.submitAble()) {
+        if (getActivity() instanceof CaseExamtActivity){
+            mCaseExamtActivity= (CaseExamtActivity) getActivity();
+        }
+        if (mCaseExamtActivity!=null&&mCaseExamtActivity.submitAble()) {
             if (mQuestionSqliteVo.getQuestiontype() == 2) {//单选
                 doRightErrorBg(mQuestionSqliteVo.getChoice_answer(), 2);
                 setSelectABCDEClick(!mCaseExamtActivity.submitAble());
@@ -1111,11 +1118,13 @@ public class GmReadThreeFragment extends BaseFragment implements TestObserver, G
 
 
     }
+
     String ab = "\t";
     String d = "\t";
     int cound = 0;
+
     private String doMainEvent(String question) {
-        final int width = mIvGmZoneQuestintype.getLayoutParams().width+20;
+        final int width = mIvGmZoneQuestintype.getLayoutParams().width + 20;
         if (mCaseExamtActivity != null) {
             if (!mCaseExamtActivity.getMainQuesiton()) {
 //                String empty = "               ";
@@ -1130,14 +1139,15 @@ public class GmReadThreeFragment extends BaseFragment implements TestObserver, G
         }
         return question;
     }
+
     private String getwith(int wd, int width) {
-        if (wd==0||width==0)return ab;
+        if (wd == 0 || width == 0) return ab;
         if (cound < width) {
             ab = ab.concat(d);
             cound += wd;
             getwith(wd, width);
         }
-        return ab+":";
+        return ab + ":";
     }
 
     /**
@@ -1155,6 +1165,9 @@ public class GmReadThreeFragment extends BaseFragment implements TestObserver, G
                 TextView tv = (TextView) itemvo.findViewById(R.id.tv_gm_keywords_content);
                 tv.setTextColor(mGmReadColorManger.getmTextFuColor());
                 tv.setText(key);
+                if (mGmReadColorManger != null) {
+                    tv.setTextColor(mGmReadColorManger.getmTextFuColor());
+                }
                 mFlowlayoutGmTwo.addView(itemvo);
             }
         }

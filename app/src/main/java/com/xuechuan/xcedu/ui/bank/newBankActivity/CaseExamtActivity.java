@@ -1013,9 +1013,11 @@ public class CaseExamtActivity extends BaseActivity implements View.OnClickListe
         mPopAnswer.showAtLocation(mCaseExamLayout, Gravity.BOTTOM, 0, 0);
         mTextUtil.setBackgroundAlpha(0.5f, CaseExamtActivity.this);
     }
-
+    //点击返回
+    boolean isBack = true;
     //结果答题卡
     private void showResultPopLayout() {
+
         mPopResult = new CommonPopupWindow(this, R.layout.pop_case_result, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT) {
             private LinearLayout mLlGmmockexamdialogLayout;
             private LinearLayout mLlMockexamBar;
@@ -1046,11 +1048,27 @@ public class CaseExamtActivity extends BaseActivity implements View.OnClickListe
 
             }
 
+
+
             @Override
             protected void initEvent() {
                 mIvGmCaseExamBack.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        if (isBack) {
+                            curPosition2 = 0;
+                            curPosition1 = 0;
+                            mMainDataLists = getLists();
+                            initReadViewPagerOne();
+                            initData(0);
+                            //主副布局
+                            doMainFuView(true, false);
+                            //主副bar
+                            doEventHine(false);
+                            mReaderViewPager.setCurrentItem(0);
+                            initfuPostion();
+                            isBack = false;
+                        }
                         EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 3, false));
                         mPopResult.getPopupWindow().dismiss();
                     }
@@ -1123,6 +1141,7 @@ public class CaseExamtActivity extends BaseActivity implements View.OnClickListe
                 switch (number) {
                     case 1://重新
                         mSubmit = false;
+                        isBack=true;
                         //图标
                         setPauseRestartImg(true, R.mipmap.qbank_answer_icon_pau);
                         //重置时间

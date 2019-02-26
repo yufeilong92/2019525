@@ -671,9 +671,12 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
             mEveryDayTestActivity = (EveryDayTestAtivity) getActivity();
             vo = mEveryDayTestActivity.queryUserData(mQuestionSqliteVo.getQuestion_id());
         }
+
+        if (mEveryDayTestActivity.getSubmitAble()) {
+            initTitleRed();
+        }
         //用户查看解析
         if (doUserLookJiXi()) return;
-
         if (vo == null) return;
         if (vo.getIsDo() == 0) return;
         if (vo.getQuestiontype() == 2) {
@@ -714,16 +717,16 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
             doSelectMoreEvent();
             doRadioEventView();
         }
-        initTitleRed();
+//        initTitleRed();
     }
 
     private void initTitleRed() {
-        if (StringUtil.isEmpty(mQuestionSqliteVo.getKeywordsString())) {
+        if (StringUtil.isEmpty(mQuestionSqliteVo.getKeywordStr())) {
             return;
         }
-        final int width = mIvGmZoneQuestintype.getLayoutParams().width+20;
-        Spanned spanned = StringUtil.repaceExamStr(mQuestionSqliteVo.getQuestionString(),
-                mQuestionSqliteVo.getKeywordsString(), null,width);
+        final int width = mIvGmZoneQuestintype.getLayoutParams().width + 20;
+        Spanned spanned = StringUtil.repaceExamStr(mQuestionSqliteVo.getQuestionStr(),
+                mQuestionSqliteVo.getKeywordStr(), null, width);
         mTvGmZoneQuestionTitle.setText(spanned);
     }
 
@@ -850,16 +853,18 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
 
 
     }
+
     String ab = "\t";
     String d = "\t";
     int cound = 0;
+
     private void readDataBindView() {
         String question = mQuestionSqliteVo.getQuestionStr();
 //        String question = mQuestionSqliteVo.getQuestionString();
         mQuestionType = mQuestionSqliteVo.getQuestiontype();
         //题干信息
         mIvGmZoneQuestintype.setImageDrawable(getQuestionType());
-        final int width = mIvGmZoneQuestintype.getLayoutParams().width+20;
+        final int width = mIvGmZoneQuestintype.getLayoutParams().width + 20;
 //        String empty = "               ";
 //        String concat = DataMessageVo.empty.concat(question);
 //        mTvGmZoneQuestionTitle.setText(getString(question));
@@ -876,7 +881,7 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
         mTvGmOneDContent.setText(mQuestionSqliteVo.getOption_d());
         mTvGmOneEContent.setText(mQuestionSqliteVo.getOption_e());
         mTvGmOneAnswerContent.setText(mQuestionSqliteVo.getChoice_answer());
-        mTvGmTwoJiexiContent.setText(mQuestionSqliteVo.getExplainString());
+        mTvGmTwoJiexiContent.setText(mQuestionSqliteVo.getExplainedStr());
 
         setStarNumber(mQuestionSqliteVo.getDifficulty());
         mTvGmTwoRightContent.setText(String.valueOf(mQuestionSqliteVo.getRight_rate()).concat("%"));
@@ -893,21 +898,23 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
         bindKaoDian();
 
     }
+
     private String getwith(int wd, int width) {
-        if (wd==0||width==0)return ab;
+        if (wd == 0 || width == 0) return ab;
         if (cound < width) {
             ab = ab.concat(d);
             cound += wd;
             getwith(wd, width);
         }
-        return ab+":";
+        return ab + ":";
     }
+
     /**
      * 绑定考点
      */
     private void bindKaoDian() {
         mFlowlayoutGmTwo.removeAllViews();
-        String keywordStr = mQuestionSqliteVo.getKeywordsString();
+        String keywordStr = mQuestionSqliteVo.getKeywordStr();
         if (StringUtil.isEmpty(keywordStr)) return;
         ArrayList<String> list = mGmTextUtil.getKeyWords(keywordStr);
         if (list != null && !list.isEmpty()) {
@@ -917,6 +924,9 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
                 TextView tv = (TextView) itemvo.findViewById(R.id.tv_gm_keywords_content);
                 tv.setTextColor(mGmReadColorManger.getmTextFuColor());
                 tv.setText(key);
+                if (mGmReadColorManger!=null){
+                    tv.setTextColor(mGmReadColorManger.getmTextFuColor());
+                }
                 mFlowlayoutGmTwo.addView(itemvo);
             }
         }
@@ -1007,9 +1017,9 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_gmone_suer_answer:
-                if (mDuoXunaSure){
-                    T.showToast(mContext,"请选择试题答案");
-                    return ;
+                if (mDuoXunaSure) {
+                    T.showToast(mContext, "请选择试题答案");
+                    return;
                 }
                 mDuoXunaSure = true;
 //                mBtnGmoneSuerAnswer.setVisibility(View.GONE);
@@ -1134,7 +1144,7 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
             case R.id.ll_gm_three_note_bg://笔记
                 Intent intent = NoteMakeActivity.start_Intent(mContext, mQuestionSqliteVo.getQuestion_id(),
                         mNote_id, mQuestionSqliteVo.getCourseid(),
-                        "", mQuestionSqliteVo.getQuestionString(), mQuestionSqliteVo.getKeywordsString(), 1);
+                        "", mQuestionSqliteVo.getQuestionStr(), mQuestionSqliteVo.getKeywordStr(), 1);
                 mContext.startActivity(intent);
                 break;
             case R.id.iv_gm_zone_question_img://问题
@@ -2081,7 +2091,7 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
                         String pic = ScreenShot.savePic(ScreenShot.getBitmapByView(mContext, mSmsvLayout));
                         if (getActivity() instanceof EveryDayTestAtivity) {
                             mEveryDayTestActivity = (EveryDayTestAtivity) getActivity();
-                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionString(),
+                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionStr(),
                                     pic, SHARE_MEDIA.QQ);
                         }
                         EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
@@ -2098,7 +2108,7 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
                         //初始化选项图片
                         if (getActivity() instanceof EveryDayTestAtivity) {
                             mEveryDayTestActivity = (EveryDayTestAtivity) getActivity();
-                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionString(),
+                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionStr(),
                                     pic, SHARE_MEDIA.QZONE);
                         }
                         EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
@@ -2114,7 +2124,7 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
                         //初始化选项图片
                         if (getActivity() instanceof EveryDayTestAtivity) {
                             mEveryDayTestActivity = (EveryDayTestAtivity) getActivity();
-                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionString(),
+                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionStr(),
                                     pic, SHARE_MEDIA.SINA);
                         }
                         EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
@@ -2130,7 +2140,7 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
                         //初始化选项图片
                         if (getActivity() instanceof EveryDayTestAtivity) {
                             mEveryDayTestActivity = (EveryDayTestAtivity) getActivity();
-                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionString(),
+                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionStr(),
                                     pic, SHARE_MEDIA.WEIXIN);
                         }
                         EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
@@ -2146,7 +2156,7 @@ public class GmTestReadFragment extends BaseFragment implements TestObserver, Vi
                         //初始化选项图片
                         if (getActivity() instanceof EveryDayTestAtivity) {
                             mEveryDayTestActivity = (EveryDayTestAtivity) getActivity();
-                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionString(),
+                            ShareUtils.shareImg(mEveryDayTestActivity, mQuestionSqliteVo.getQuestionStr(),
                                     pic, SHARE_MEDIA.WEIXIN_CIRCLE);
                         }
                         EventBus.getDefault().postSticky(new GmChangerColorEvent(0, 5, false));
