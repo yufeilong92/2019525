@@ -100,7 +100,7 @@ public class PiloActivity extends BaseActivity implements RefreshTokenView, Easy
     }
 
     private void initData() {
-//        doDbAddM();
+        doDbAddM();
         onreateMySqliteDb();
 //        DBHelper.initDb(MyAppliction.getInstance());
         String newType = Utils.getNewType(mContext);

@@ -913,6 +913,9 @@ public class NetBookMyInfomActivity extends BaseActivity implements View.OnClick
     public void play(final String vid, final int bitrate, boolean startNow, final boolean isMustFromLocal) {
         if (TextUtils.isEmpty(vid)) return;
         mMessageVo.setWatchTime(0);
+        if (videoView.isCompletedState()) {
+            videoView.seekTo(0);
+        }
         videoView.release();
         mediaController.hide();
         loadingProgress.setVisibility(View.GONE);

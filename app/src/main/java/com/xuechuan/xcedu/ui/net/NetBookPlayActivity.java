@@ -577,6 +577,9 @@ public class NetBookPlayActivity extends BaseActivity {
             mediaController.setVideoTitle(mKName);
         }
         if (startNow) {
+            if (videoView.isCompletedState()) {
+                videoView.seekTo(0);
+            }
             //调用setVid方法视频会自动播放
             videoView.setVid(vid, bitrate, isMustFromLocal);
         }

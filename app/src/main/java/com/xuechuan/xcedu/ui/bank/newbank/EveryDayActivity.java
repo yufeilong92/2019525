@@ -176,6 +176,9 @@ public class EveryDayActivity extends BaseActivity implements View.OnClickListen
                 showHineView(false, true);
                 return;
             }
+            else {
+                showHineView(true, false);
+            }
             initAdapter(list);
         } else {
             T_ERROR(mContext);
